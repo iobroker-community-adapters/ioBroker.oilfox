@@ -20,11 +20,9 @@ adapter.on('ready', function () {
     adapter.log.debug("adapter.on-ready: << READY >>");
 	
 	if (adapter.config.email && adapter.config.password) {
-        pollInterval = adapter.config.pollInterval || 7000;
+        pollInterval = adapter.config.pollInterval || 60000;
         main();
     } else adapter.log.warn('No E-Mail or Password set');
-	
-    main();
 });
 
 adapter.on('unload', function () {
@@ -155,7 +153,7 @@ function connectOilfox() {
 						j++;
 					}
 
-					pollTimer = setTimeout(() => connectOilfox(), adapter.config.pollInterval ?  adapter.config.pollInterval : 60000);					
+					pollTimer = setTimeout(() => connectOilfox(), pollInterval);					
 					
 				});
 			});
