@@ -59,17 +59,21 @@ function connectOilfox() {
 
   let post_req = https.request(post_options, function(res) {
       res.setEncoding('utf8');
-      res.on('data', function (chunk) {
-          adapter.log.debug("recieved data: " + chunk);
-		  let resData = JSON.parse(chunk);
+	  let rData = "";
+	  res.on('data', function(chunk) { adapter.log.debug("recieved chunk: " + chunk); rData += .chunk; });
+	  res.on('end', function () {
+          adapter.log.debug("recieved data: " + rData);
+		  let resData = JSON.parse(rData);
 		  post_options.headers['X-Auth-Token'] = resData.token;
 		  post_options.path = '/v2/user/summary';
 		  post_options.method = 'GET';
 		  let post_req2 = https.request(post_options, function(res2) {
 		    res2.setEncoding('utf8');
-			res2.on('data', function (chunk2) {
-				 adapter.log.debug("recieved data 2: " + chunk2);
-				 let result = JSON.parse(chunk2);
+			let rData2 = "";
+			res2.on('data', function(chunk2) { adapter.log.debug("recieved chunk2: " + chunk2); rData2 += .chunk2; });
+			res2.on('end', function () {
+				 adapter.log.debug("recieved data 2: " + rData2);
+				 let result = JSON.parse(rData2);
 				 const promises = [];
 
 				for (let p in result)
