@@ -1,0 +1,28 @@
+{
+    "common": {
+        "name":             "oilfox",
+        "version":          "0.0.1",
+        "title":            "Oilfox Adapter",
+        "desc":             "Javascript/Node.js based Oilfox adapter",
+        "platform":         "Javascript/Node.js",
+        "mode":             "daemon",
+        "icon":             "oilfox.jpg",
+        "materialize":      true,
+        "enabled":          true,
+        "messagebox":       false,
+        "loglevel":         "info",
+        "keywords":         ["oilfox"],
+        "nondeletable":     false,
+        "type":             "hardware",
+        "authors": 	        ["jochen kuehner <jochen.kuehner@gmx.de>"],
+        "license":          "MIT",
+        "readme":           "",
+        "extIcon":          ""
+    },
+    
+    "objects": [
+    ],
+    
+    "instanceObjects": [
+    ]
+}

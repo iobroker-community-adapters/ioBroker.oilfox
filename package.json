@@ -1,0 +1,52 @@
+{
+  "name": "iobroker.oilfox",
+  "version": "0.0.1",
+  "description": "Oilfox Adapter for ioBroker",
+  "author": {
+    "name": "Karl-Heinz Steffens",
+    "email": "karl-heinz.steffens@web.de"
+  },
+  "contributors": [
+    {
+      "name": "Karl-Heinz Steffens",
+      "email": "karl-heinz.steffens@web.de"
+    }
+  ],
+  "homepage": "https://github.com/ioBroker/ioBroker.onkyo",
+  "license": "MIT",
+  "keywords": [
+    "ioBroker",
+    "oilfox",
+    "home automation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioBroker/ioBroker.onkyo.git"
+  },
+  "devDependencies": {
+  },
+  "bugs": {
+    "url": "https://github.com/ioBroker/ioBroker.onkyo/issues"
+  },
+  "main": "denon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dist": {
+    "shasum": "8c0c3f1fdb4285482a092d4a021e76e3bfab8410",
+    "tarball": "http://registry.npmjs.org/iobroker.onkyo/-/iobroker.onkyo-0.1.11.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "bluefox",
+      "email": "dogafox@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "file:node_modules\\iobroker.denon",
+  "readme": "![Logo](admin/oilfox.png)\r\n# ioBroker.denon\r\n\r\nThis adapter allows control of Onkyo AVRs using the EISCP protocol.\r\n\r\nIt uses node-eiscp: https://github.com/tillbaks/node-eiscp\r\n\r\nThe node-eiscp module parses raw EISCP messages into high-level\r\nstructured names like \"master-volume\", and the states will have those\r\nhigh level names, e.g. \"onkyo.0.master-volume\"\r\n\r\nFor sending commands, there is a special state \"command\". Writes to that state\r\ntrigger either an high-level EISCP command as described in the \"Command syntax\" section\r\nof https://github.com/tillbaks/node-eiscp like\r\n\r\n    system-power=on\r\n    zone2.power=on\r\n    main.balance=3\r\n\r\nor a raw EISCP command in the form of \"PWR01\".\r\n\r\nAnother special state maintained by the adapter is \"connected\". It's a boolean\r\nshowing whether node-eiscp is currently connected to a receiver.\r\n\r\n\r\n### 0.0.1\r\n* (khst) initial version\r\n\r\n",
+  "readmeFilename": "README.md",
+  "_id": "iobroker.oilfox@0.0.1",
+  "_shasum": "c50fd80fcfdb3e94183f22642ffd03cc00b06761",
+  "_from": "node_modules\\iobroker.oilfox"
+}
