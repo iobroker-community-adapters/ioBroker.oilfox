@@ -81,7 +81,7 @@ function connectOilfox() {
 							common: {
 								'name': p,
 								'role': 'info.display',
-								'type': 'string',
+								'type': typeof result[p],
 								'write': false,
 								'read': true
 							},
@@ -101,7 +101,7 @@ function connectOilfox() {
 								common: {
 									'name': 'device.' + pp,
 									'role': 'info.display',
-									'type': 'string',
+									'type': typeof result.devices[p][pp],
 									'write': false,
 									'read': true
 								},
@@ -119,7 +119,7 @@ function connectOilfox() {
 								common: {
 									'name': 'device.metering.' + pp,
 									'role': 'info.display',
-									'type': 'string',
+									'type': typeof result.devices[i].metering[pp],
 									'write': false,
 									'read': true
 								},
