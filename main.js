@@ -79,7 +79,7 @@ function connectOilfox() {
 						promises.push(adapter.setObjectNotExistsAsync('info.' + p, {
 							type: 'state',
 							common: {
-								'name': 'Display content 0',
+								'name': p,
 								'role': 'info.display',
 								'type': 'string',
 								'write': false,
@@ -90,14 +90,14 @@ function connectOilfox() {
 					}
 				}
 				let i = 0;
-				for (let p in result.devices[i])
+				for (let pa in result.devices[i])
 				{
-					if (typeof result.devices[i][p] !== 'object')
+					if (typeof result.devices[i][pa] !== 'object')
 					{
-						promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.' + p, {
+						promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.' + pa, {
 							type: 'state',
 							common: {
-								'name': 'Display content 0',
+								'name': 'device.' + pa,
 								'role': 'info.display',
 								'type': 'string',
 								'write': false,
@@ -114,7 +114,7 @@ function connectOilfox() {
 							promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.metering.' + pp, {
 								type: 'state',
 								common: {
-									'name': 'Display content 0',
+									'name': 'device.metering.' + pp,
 									'role': 'info.display',
 									'type': 'string',
 									'write': false,
