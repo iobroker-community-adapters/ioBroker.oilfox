@@ -94,7 +94,7 @@ function connectOilfox() {
 				let i = 0;
 				for (let p in result.devices)
 				{
-					if (typeof result[p] !== 'object')
+					if (typeof result.devices[i][p] !== 'object')
 					{
 						promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.' + p, {
 							type: 'state',
@@ -109,9 +109,9 @@ function connectOilfox() {
 						}));
 					}
 					
-					for (let pp in result.devices[i])
+					for (let pp in result.devices[i].metering)
 					{
-						if (typeof result[pp] !== 'object')
+						if (typeof result.devices[i].metering[pp] !== 'object')
 						{
 							promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.metering.' + pp, {
 								type: 'state',
@@ -128,45 +128,7 @@ function connectOilfox() {
 					}
 					i++;
 				}
-				/*promises.push(adapter.setObjectNotExistsAsync('info.country', {
-					type: 'state',
-					common: {
-						'name': 'Display content 0',
-						'role': 'info.display',
-						'type': 'string',
-						'write': false,
-						'read': true
-					},
-					native: {}
-				}));*/
 				
-				/*let i = 0;
-				for (let d of result.devices) {
-					promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.id', {
-					type: 'state',
-					common: {
-						'name': 'Display content 0',
-						'role': 'info.display',
-						'type': 'string',
-						'write': false,
-						'read': true
-					},
-					native: {}
-					}));
-					
-					promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.metering.liters', {
-					type: 'state',
-					common: {
-						'name': 'Display content 0',
-						'role': 'info.display',
-						'type': 'string',
-						'write': false,
-						'read': true
-					},
-					native: {}
-					}));
-					i++;
-				}*/
 				Promise.all(promises).then(() => {
 					for (let p in result)
 					{
@@ -178,27 +140,20 @@ function connectOilfox() {
 					let j = 0;
 					for (let p in result.devices)
 					{
-						if (typeof result[p] !== 'object')
+						if (typeof result.devices[j][p] !== 'object')
 						{
-							adapter.setState('devices.' + j + '.' + p, result.devices[0][p], true);
+							adapter.setState('devices.' + j + '.' + p, result.devices[j][p], true);
 						}
 						
-						for (let pp in result.devices[i])
+						for (let pp in result.devices[j].metering)
 						{
-							if (typeof result[pp] !== 'object')
+							if (typeof result.devices[j].metering[pp] !== 'object')
 							{
-								adapter.setState('devices.' + j + '.metering.' + pp, result.devices[0].metering[pp], true);								
+								adapter.setState('devices.' + j + '.metering.' + pp, result.devices[j].metering[pp], true);								
 							}
 						}
 						j++;
 					}
-					//adapter.setState('info.country', result.country, true);
-					/*let j = 0;
-					for (let d of result.devices) {
-						adapter.setState('devices.' + j + '.id', result.devices[0].id, true);
-						adapter.setState('devices.' + j + '.metering.liters', result.devices[0].metering.liters, true);
-						j++;
-					}*/
 
 					pollTimer = setTimeout(() => connectOilfox(), adapter.config.pollInterval ?  adapter.config.pollInterval : 60000);					
 					
