@@ -60,7 +60,7 @@ function connectOilfox() {
   let post_req = https.request(post_options, function(res) {
       res.setEncoding('utf8');
 	  let rData = "";
-	  res.on('data', function(chunk) { adapter.log.debug("recieved chunk: " + chunk); rData += .chunk; });
+	  res.on('data', function(chunk) { adapter.log.debug("recieved chunk: " + chunk); rData += chunk; });
 	  res.on('end', function () {
           adapter.log.debug("recieved data: " + rData);
 		  let resData = JSON.parse(rData);
@@ -70,7 +70,7 @@ function connectOilfox() {
 		  let post_req2 = https.request(post_options, function(res2) {
 		    res2.setEncoding('utf8');
 			let rData2 = "";
-			res2.on('data', function(chunk2) { adapter.log.debug("recieved chunk2: " + chunk2); rData2 += .chunk2; });
+			res2.on('data', function(chunk2) { adapter.log.debug("recieved chunk2: " + chunk2); rData2 += chunk2; });
 			res2.on('end', function () {
 				 adapter.log.debug("recieved data 2: " + rData2);
 				 let result = JSON.parse(rData2);
