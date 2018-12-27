@@ -92,7 +92,7 @@ function connectOilfox() {
 					}
 				}
 				let i = 0;
-				for (let p in result.devices)
+				for (let p in result.devices[i])
 				{
 					if (typeof result.devices[i][p] !== 'object')
 					{
@@ -138,7 +138,7 @@ function connectOilfox() {
 						}
 					}
 					let j = 0;
-					for (let p in result.devices)
+					for (let p in result.devices[j])
 					{
 						if (typeof result.devices[j][p] !== 'object')
 						{
