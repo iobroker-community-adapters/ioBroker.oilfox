@@ -90,21 +90,24 @@ function connectOilfox() {
 					}
 				}
 				let i = 0;
-				for (let pa in result.devices[i])
+				for (let p in result.devices)
 				{
-					if (typeof result.devices[i][pa] !== 'object')
+					for (let pp in result.devices[p])
 					{
-						promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.' + pa, {
-							type: 'state',
-							common: {
-								'name': 'device.' + pa,
-								'role': 'info.display',
-								'type': 'string',
-								'write': false,
-								'read': true
-							},
-							native: {}
-						}));
+						if (typeof result.devices[p][pp] !== 'object')
+						{
+							promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.' + pp, {
+								type: 'state',
+								common: {
+									'name': 'device.' + pp,
+									'role': 'info.display',
+									'type': 'string',
+									'write': false,
+									'read': true
+								},
+								native: {}
+							}));
+						}
 					}
 					
 					for (let pp in result.devices[i].metering)
@@ -136,18 +139,21 @@ function connectOilfox() {
 						}
 					}
 					let j = 0;
-					for (let p in result.devices[j])
+					for (let p in result.devices)
 					{
-						if (typeof result.devices[j][p] !== 'object')
+						for (let pp in result.devices[p])
 						{
-							adapter.setState('devices.' + j + '.' + p, result.devices[j][p], true);
+							if (typeof result.devices[p][pp] !== 'object')
+							{
+								adapter.setState('devices.' + j + '.' + pp, result.devices[p][pp], true);
+							}
 						}
 						
-						for (let pp in result.devices[j].metering)
+						for (let pp in result.devices[p].metering)
 						{
-							if (typeof result.devices[j].metering[pp] !== 'object')
+							if (typeof result.devices[p].metering[pp] !== 'object')
 							{
-								adapter.setState('devices.' + j + '.metering.' + pp, result.devices[j].metering[pp], true);								
+								adapter.setState('devices.' + j + '.metering.' + pp, result.devices[p].metering[pp], true);								
 							}
 						}
 						j++;
