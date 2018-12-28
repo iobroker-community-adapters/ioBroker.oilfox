@@ -1,4 +1,4 @@
-![Logo](img/oilfox.jpg)
+![Logo](img/oilfox.png)
 # ioBroker.oilfox
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.oilfox.svg)](https://www.npmjs.com/package/iobroker.oilfox)

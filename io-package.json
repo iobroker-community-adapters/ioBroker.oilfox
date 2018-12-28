@@ -6,7 +6,7 @@
         "desc":             "Javascript/Node.js based Oilfox adapter",
         "platform":         "Javascript/Node.js",
         "mode":             "daemon",
-        "icon":             "oilfox.jpg",
+        "icon":             "oilfox.png",
         "materialize":      true,
         "enabled":          true,
         "messagebox":       false,

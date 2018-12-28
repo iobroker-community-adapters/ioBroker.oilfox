@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "description": "Oilfox Adapter for ioBroker",
   "author": {
-    "name": "Karl-Heinz Steffens",
-    "email": "karl-heinz.steffens@web.de"
+      "name": "Jochen Kuehner",
+      "email": "jochen.kuehner@gmx.de"
   },
   "contributors": [
     {
-      "name": "Karl-Heinz Steffens",
-      "email": "karl-heinz.steffens@web.de"
+      "name": "Jochen Kuehner",
+      "email": "jochen.kuehner@gmx.de"
     }
   ],
   "homepage": "https://github.com/iobroker-adapters/iobroker.oilfox",
@@ -38,8 +38,8 @@
   },
   "maintainers": [
     {
-      "name": "bluefox",
-      "email": "dogafox@gmail.com"
+      "name": "Jochen Kuehner",
+      "email": "jochen.kuehner@gmx.de"
     }
   ],
   "directories": {},
