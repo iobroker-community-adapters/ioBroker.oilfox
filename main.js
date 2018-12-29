@@ -81,7 +81,7 @@ function connectOilfox() {
 						createStateObjectsFromResult(summaryObject);
 						pollTimer = setTimeout(() => connectOilfox(), pollInterval);
 					}).catch((err) => {
-						adapter.log.error("error: " + errr);
+						adapter.log.error("error: " + err);
 					});
 				});
 			});
@@ -115,6 +115,13 @@ function createStateObjectsFromResult(summaryObject) {
 				},
 				native: {}
 			}));
+			adapter.log.debug(JSON.stringify({
+					'name': p,
+					'role': 'state',
+					'type': typeof summaryObject[p],
+					'write': false,
+					'read': true
+				}));
 		}
 	}
 	let i = 0;
@@ -132,6 +139,13 @@ function createStateObjectsFromResult(summaryObject) {
 					},
 					native: {}
 				}));
+				adapter.log.debug(JSON.stringify({
+						'name': 'device.' + pp,
+						'role': 'state',
+						'type': typeof summaryObject.devices[p][pp],
+						'write': false,
+						'read': true
+					}));
 			}
 		}
 
@@ -148,6 +162,13 @@ function createStateObjectsFromResult(summaryObject) {
 					},
 					native: {}
 				}));
+				adapter.log.debug(JSON.stringify({
+						'name': 'device.metering.' + pp,
+						'role': 'state',
+						'type': typeof summaryObject.devices[p].metering[pp],
+						'write': false,
+						'read': true
+					}));
 			}
 		}
 		i++;
