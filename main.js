@@ -74,13 +74,14 @@ function connectOilfox() {
 				summaryRequestResult.on('end', () => {
 					adapter.log.debug("recieved data 2: " + summaryData);
 					let summaryObject = JSON.parse(summaryData);
-
 					let promises = createStateObjectsFromResult(summaryObject);
 					adapter.log.debug("create state objects from summary");
 					Promise.all(promises).then(() => {
 						adapter.log.debug("update states from summary");
 						createStateObjectsFromResult(summaryObject);
 						pollTimer = setTimeout(() => connectOilfox(), pollInterval);
+					}).catch((err) => {
+						adapter.log.error("error: " + errr);
 					});
 				});
 			});
@@ -99,7 +100,7 @@ function main() {
 }
 
 function createStateObjectsFromResult(summaryObject) {
-	let promises = [];
+	const promises = [];
 
 	for (let p in summaryObject) {
 		if (typeof summaryObject[p] !== 'object') {
@@ -134,14 +135,14 @@ function createStateObjectsFromResult(summaryObject) {
 			}
 		}
 
-		for (let pp in summaryObject.devices[i].metering) {
-			if (typeof summaryObject.devices[i].metering[pp] !== 'object') {
+		for (let pp in summaryObject.devices[p].metering) {
+			if (typeof summaryObject.devices[p].metering[pp] !== 'object') {
 				promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.metering.' + pp, {
 					type: 'state',
 					common: {
 						'name': 'device.metering.' + pp,
 						'role': 'state',
-						'type': typeof summaryObject.devices[i].metering[pp],
+						'type': typeof summaryObject.devices[p].metering[pp],
 						'write': false,
 						'read': true
 					},
