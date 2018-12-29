@@ -20,6 +20,12 @@
         "extIcon":          ""
     },
     
+	"native": {
+        "email": "",
+        "password": "",
+        "pollInterval": 60000
+    },
+	
     "objects": [
     ],
     
