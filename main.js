@@ -76,11 +76,11 @@ function connectOilfox() {
 					let summaryObject = JSON.parse(summaryData);
 
 					let promises = createStateObjectsFromResult(summaryObject);
-
+					adapter.log.debug("create state objects from summary");
 					Promise.all(promises).then(() => {
+						adapter.log.debug("update states from summary");
 						createStateObjectsFromResult(summaryObject);
 						pollTimer = setTimeout(() => connectOilfox(), pollInterval);
-
 					});
 				});
 			});
