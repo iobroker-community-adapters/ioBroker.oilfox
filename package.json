@@ -12,7 +12,7 @@
       "email": "jochen.kuehner@gmx.de"
     }
   ],
-  "homepage": "https://github.com/iobroker-adapters/iobroker.oilfox",
+  "homepage": "https://github.com/iobroker-community-adapters/ioBroker.oilfox",
   "license": "MIT",
   "keywords": [
     "ioBroker",
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iobroker-adapters/iobroker.oilfox.git"
+    "url": "git+https://github.com/iobroker-community-adapters/ioBroker.oilfox.git"
   },
   "dependencies": {
 		"@iobroker/adapter-core": "^1.0.1"
@@ -29,15 +29,11 @@
   "devDependencies": {
   },
   "bugs": {
-    "url": "https://github.com/iobroker-adapters/iobroker.oilfox/issues"
+    "url": "https://github.com/iobroker-community-adapters/ioBroker.oilfox/issues"
   },
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dist": {
-    "shasum": "8c0c3f1fdb4285482a092d4a021e76e3bfab8410",
-    "tarball": "http://registry.npmjs.org/iobroker.onkyo/-/iobroker.onkyo-0.1.11.tgz"
   },
   "maintainers": [
     {
