@@ -11,6 +11,7 @@ const https = require('https');
 
 let pollInterval;
 let pollTimer;
+let createStateObjects = false;
 
 adapter.on('message', function (obj) {
 	adapter.log.debug("adapter.on-message: << MESSAGE >>");
@@ -21,6 +22,7 @@ adapter.on('ready', function () {
 
 	if (adapter.config.email && adapter.config.password) {
 		pollInterval = adapter.config.pollInterval || 60000;
+		createStateObjects = true;
 		main();
 	} else adapter.log.warn('No E-Mail or Password set');
 });
@@ -75,14 +77,19 @@ function connectOilfox() {
 					adapter.log.debug("recieved data 2: " + summaryData);
 					let summaryObject = JSON.parse(summaryData);
 					let promises = createStateObjectsFromResult(summaryObject);
-					adapter.log.debug("create state objects from summary");
-					Promise.all(promises).then(() => {
+					if (createStateObjects) {
+						adapter.log.debug("create state objects from summary");
+						Promise.all(promises).then(() => {
+							adapter.log.debug("update states from summary");
+							updateStatesFromResult(summaryObject);
+							pollTimer = setTimeout(() => connectOilfox(), pollInterval);
+						}).catch((err) => {
+							adapter.log.error("error: " + err);
+						});
+					} else { 
 						adapter.log.debug("update states from summary");
 						updateStatesFromResult(summaryObject);
-						pollTimer = setTimeout(() => connectOilfox(), pollInterval);
-					}).catch((err) => {
-						adapter.log.error("error: " + err);
-					});
+					}
 				});
 			});
 			summaryRequest.end();
