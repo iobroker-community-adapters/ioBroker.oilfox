@@ -78,7 +78,7 @@ function connectOilfox() {
 					adapter.log.debug("create state objects from summary");
 					Promise.all(promises).then(() => {
 						adapter.log.debug("update states from summary");
-						createStateObjectsFromResult(summaryObject);
+						updateStatesFromResult(summaryObject);
 						pollTimer = setTimeout(() => connectOilfox(), pollInterval);
 					}).catch((err) => {
 						adapter.log.error("error: " + err);
@@ -101,8 +101,6 @@ function main() {
 
 function createStateObjectsFromResult(summaryObject) {
 	const promises = [];
-	adapter.log.debug("try create promises");
-	adapter.log.debug(JSON.stringify(summaryObject));
 	for (let p in summaryObject) {
 		if (typeof summaryObject[p] !== 'object') {
 			promises.push(adapter.setObjectNotExistsAsync('info.' + p, {
@@ -116,13 +114,6 @@ function createStateObjectsFromResult(summaryObject) {
 				},
 				native: {}
 			}));
-			adapter.log.debug(JSON.stringify({
-					'name': p,
-					'role': 'state',
-					'type': typeof summaryObject[p],
-					'write': false,
-					'read': true
-				}));
 		}
 	}
 	let i = 0;
@@ -140,13 +131,6 @@ function createStateObjectsFromResult(summaryObject) {
 					},
 					native: {}
 				}));
-				adapter.log.debug(JSON.stringify({
-						'name': 'device.' + pp,
-						'role': 'state',
-						'type': typeof summaryObject.devices[p][pp],
-						'write': false,
-						'read': true
-					}));
 			}
 		}
 
@@ -163,13 +147,6 @@ function createStateObjectsFromResult(summaryObject) {
 					},
 					native: {}
 				}));
-				adapter.log.debug(JSON.stringify({
-						'name': 'device.metering.' + pp,
-						'role': 'state',
-						'type': typeof summaryObject.devices[p].metering[pp],
-						'write': false,
-						'read': true
-					}));
 			}
 		}
 		i++;
@@ -177,7 +154,7 @@ function createStateObjectsFromResult(summaryObject) {
 	return promises;
 }
 
-function createStateObjectsFromResult(summaryObject) {
+function updateStatesFromResult(summaryObject) {
 	for (let p in summaryObject) {
 		if (typeof summaryObject[p] !== 'object') {
 			adapter.setState('info.' + p, summaryObject[p], true);
