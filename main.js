@@ -101,7 +101,8 @@ function main() {
 
 function createStateObjectsFromResult(summaryObject) {
 	const promises = [];
-
+	adapter.log.debug("try create promises");
+	adapter.log.debug(JSON.stringify(summaryObject));
 	for (let p in summaryObject) {
 		if (typeof summaryObject[p] !== 'object') {
 			promises.push(adapter.setObjectNotExistsAsync('info.' + p, {
