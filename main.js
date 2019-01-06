@@ -18,7 +18,12 @@ adapter.on('ready', function () {
 
 	if (adapter.config.email && adapter.config.password) {
 		main();
-	} else adapter.log.warn('No E-Mail or Password set');
+	} else {
+		adapter.log.warn('No E-Mail or Password set');
+		adapter.stop();
+	}
+	
+	
 });
 
 adapter.on('unload', function () {
@@ -80,6 +85,7 @@ function connectOilfox() {
 						adapter.log.debug("update states from summary");
 						updateStatesFromResult(summaryObject);
 					}
+					adapter.stop();
 				});
 			});
 			summaryRequest.end();
