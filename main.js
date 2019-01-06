@@ -9,10 +9,6 @@ const adapter = new utils.Adapter('oilfox');
 const querystring = require('querystring');
 const https = require('https');
 
-let pollInterval;
-let pollTimer;
-let createStateObjects = false;
-
 adapter.on('message', function (obj) {
 	adapter.log.debug("adapter.on-message: << MESSAGE >>");
 });
@@ -21,17 +17,12 @@ adapter.on('ready', function () {
 	adapter.log.debug("adapter.on-ready: << READY >>");
 
 	if (adapter.config.email && adapter.config.password) {
-		pollInterval = adapter.config.pollInterval || 60000;
-		createStateObjects = true;
 		main();
 	} else adapter.log.warn('No E-Mail or Password set');
 });
 
 adapter.on('unload', function () {
 	adapter.log.debug("adapter.on-unload: << UNLOAD >>");
-
-	if (pollTimer)
-		clearTimeout(pollTimer);
 });
 
 adapter.on('stateChange', function (id, state) {
@@ -82,7 +73,6 @@ function connectOilfox() {
 						Promise.all(promises).then(() => {
 							adapter.log.debug("update states from summary");
 							updateStatesFromResult(summaryObject);
-							pollTimer = setTimeout(() => connectOilfox(), pollInterval);
 						}).catch((err) => {
 							adapter.log.error("error: " + err);
 						});

@@ -42,7 +42,6 @@
 
     function load(settings, onChange) {
        if (!settings) return;
-       if (settings.pollInterval === undefined) settings.pollInterval = 60000;
        
         $('.value').each(function () {            
             var $key = $(this);
@@ -140,7 +139,6 @@
             <div class="col s12">
                 <ul class="tabs">
                     <li class="tab col s5"><a href="#tab-main" class="translate active">Main settings</a></li>
-                    <li class="tab col s5"><a href="#tab-advanced" class="translate">Advanced settings</a></li>
                 </ul>
             </div>
             
@@ -160,15 +158,6 @@
                         <input class="value" id="password" type="text"/>
                         <label for="password" class="translate">Password</label>
                         <span class="translate">Password of your Oilfox Account</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="tab-advanced" class="col s12 page">
-                <div class="row">
-                    <div class="input-field col s4">
-                        <input id="pollInterval" class="value" type="number" min="10000" max="1200000"/>
-                        <label for="pollInterval" class="translate">Poll interval (ms)</label>
                     </div>
                 </div>
             </div>

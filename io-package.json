@@ -1,11 +1,12 @@
 {
     "common": {
         "name":             "oilfox",
-        "version":          "0.0.1",
+        "version":          "0.0.2",
         "title":            "Oilfox Adapter",
         "desc":             "Javascript/Node.js based Oilfox adapter",
         "platform":         "Javascript/Node.js",
-        "mode":             "daemon",
+        "mode":             "schedule",
+		"schedule":			"*/10 * * * *",
         "icon":             "oilfox.png",
         "materialize":      true,
         "enabled":          true,
@@ -22,8 +23,7 @@
     
 	"native": {
         "email": "",
-        "password": "",
-        "pollInterval": 60000
+        "password": ""
     },
 	
     "objects": [
