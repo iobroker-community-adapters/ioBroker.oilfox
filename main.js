@@ -5,35 +5,30 @@
 "use strict";
 
 const utils = require('@iobroker/adapter-core');
-const adapter = new utils.Adapter('oilfox');
 const querystring = require('querystring');
 const https = require('https');
+const adapterName = require('./package.json').name.split('.').pop();
 
-adapter.on('message', function (obj) {
-	adapter.log.debug("adapter.on-message: << MESSAGE >>");
+let adapter;
+function startAdapter(options) {
+	options = options || {};
+	Object.assign(options, {
+	   name: adapterName,
+	   ready: function () {
+		   adapter.log.debug("adapter.on-ready: << READY >>");
+
+			if (adapter.config.email && adapter.config.password) {
+				main();
+			} else {
+				adapter.log.warn('No E-Mail or Password set');
+				adapter.stop();
+			}
+	   }
+	});
+	adapter = new utils.Adapter(options);
+
+	return adapter;
 });
-
-adapter.on('ready', function () {
-	adapter.log.debug("adapter.on-ready: << READY >>");
-
-	if (adapter.config.email && adapter.config.password) {
-		main();
-	} else {
-		adapter.log.warn('No E-Mail or Password set');
-		adapter.stop();
-	}
-	
-	
-});
-
-adapter.on('unload', function () {
-	adapter.log.debug("adapter.on-unload: << UNLOAD >>");
-});
-
-adapter.on('stateChange', function (id, state) {
-	adapter.log.debug("adapter.on-stateChange: << STATE-CHANGE >>");
-});
-
 
 function connectOilfox() {
 	let post_data = JSON.stringify({
@@ -176,3 +171,11 @@ function updateStatesFromResult(summaryObject) {
 		j++;
 	}
 }
+
+// If started as allInOne/compact mode => return function to create instance
+if (module && module.parent) {
+    module.exports = startAdapter;
+} else {
+    // or start the instance directly
+    startAdapter();
+} 

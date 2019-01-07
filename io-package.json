@@ -1,7 +1,7 @@
 {
     "common": {
         "name":             "oilfox",
-        "version":          "0.0.2",
+        "version":          "0.0.3",
         "title":            "Oilfox Adapter",
         "desc":             "Javascript/Node.js based Oilfox adapter",
         "platform":         "Javascript/Node.js",
@@ -18,7 +18,8 @@
         "authors": 	        ["jochen kuehner <jochen.kuehner@gmx.de>"],
         "license":          "MIT",
         "readme":           "https://github.com/iobroker-community-adapters/ioBroker.oilfox/blob/master/README.md",
-        "extIcon":          "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/admin/oilfox.png"
+        "extIcon":          "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/admin/oilfox.png",
+		"compact":          true
     },
     
 	"native": {

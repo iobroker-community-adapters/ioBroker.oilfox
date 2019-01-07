@@ -14,6 +14,9 @@ This adapter allows to get data from the oilfox sensor via the Oilfox Website.
 * specify the your e-mail and password in the configuration page
 
 ## Changelog
+### 0.0.3
+* (jk) support compact mode
+
 ### 0.0.2
 * (jk) change to scheduled adapter
 
