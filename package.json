@@ -1,6 +1,6 @@
 {
   "name": "iobroker.oilfox",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Oilfox Adapter for ioBroker",
   "author": {
     "name": "Jochen Kuehner",
