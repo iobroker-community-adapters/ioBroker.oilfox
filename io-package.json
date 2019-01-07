@@ -2,7 +2,8 @@
     "common": {
         "name":             "oilfox",
         "version":          "0.0.3",
-        "title":            "Oilfox Adapter",
+		"titleLang":        "en",
+        "title":            "Oilfox",
         "desc":             "Javascript/Node.js based Oilfox adapter",
         "platform":         "Javascript/Node.js",
         "mode":             "schedule",

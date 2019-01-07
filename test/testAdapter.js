@@ -98,16 +98,11 @@ describe('Test ' + adapterShortName + ' adapter', function() {
         });
     });
 
-/**/
 
-/*
-    PUT YOUR OWN TESTS HERE USING
-    it('Testname', function ( done) {
-        ...
+    it('Test ' + adapterShortName + ' adapter: Check nothing', function (done) {
+        this.timeout(1000);
+        done();
     });
-
-    You can also use "sendTo" method to send messages to the started adapter
-*/
 
     after('Test ' + adapterShortName + ' adapter: Stop js-controller', function (done) {
         this.timeout(10000);
