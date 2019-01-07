@@ -3,7 +3,7 @@
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.oilfox.svg)](https://www.npmjs.com/package/iobroker.oilfox)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.oilfox.svg)](https://www.npmjs.com/package/iobroker.oilfox)
-[![Build Status](https://travis-ci.org/foxthefox/iobroker.oilfox.svg?branch=master)](https://travis-ci.org/foxthefox/iobroker.oilfox)
+[![Build Status](https://travis-ci.org/iobroker-community-adapters/ioBroker.oilfox.svg?branch=master)](https://travis-ci.org/iobroker-community-adapters/ioBroker.oilfox.svg?branch=master)
 
 [![NPM](https://nodei.co/npm/iobroker.oilfox.png?downloads=true)](https://nodei.co/npm/iobroker.oilfox/)
 
