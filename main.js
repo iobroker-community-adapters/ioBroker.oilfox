@@ -73,18 +73,15 @@ function connectOilfox() {
 					adapter.log.debug("recieved data 2: " + summaryData);
 					let summaryObject = JSON.parse(summaryData);
 					let promises = createStateObjectsFromResult(summaryObject);
-					if (createStateObjects) {
-						adapter.log.debug("create state objects from summary");
-						Promise.all(promises).then(() => {
-							adapter.log.debug("update states from summary");
-							updateStatesFromResult(summaryObject);
-						}).catch((err) => {
-							adapter.log.error("error: " + err);
-						});
-					} else { 
+					
+					adapter.log.debug("create state objects from summary");
+					Promise.all(promises).then(() => {
 						adapter.log.debug("update states from summary");
 						updateStatesFromResult(summaryObject);
-					}
+					}).catch((err) => {
+						adapter.log.error("error: " + err);
+					});
+					
 					adapter.stop();
 				});
 			});
