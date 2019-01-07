@@ -3,8 +3,8 @@
   "version": "0.0.2",
   "description": "Oilfox Adapter for ioBroker",
   "author": {
-      "name": "Jochen Kuehner",
-      "email": "jochen.kuehner@gmx.de"
+    "name": "Jochen Kuehner",
+    "email": "jochen.kuehner@gmx.de"
   },
   "contributors": [
     {
@@ -24,12 +24,12 @@
     "url": "git+https://github.com/iobroker-community-adapters/ioBroker.oilfox.git"
   },
   "dependencies": {
-		"@iobroker/adapter-core": "^1.0.1"
+    "@iobroker/adapter-core": "^1.0.3"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "mocha": "^4.1.0",
-    "chai": "^4.1.2"
+    "gulp": "^4.0.0",
+    "mocha": "^5.2.0",
+    "chai": "^4.2.0"
   },
   "bugs": {
     "url": "https://github.com/iobroker-community-adapters/ioBroker.oilfox/issues"
