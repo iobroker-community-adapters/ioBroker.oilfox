@@ -1,10 +1,65 @@
 {
     "common": {
         "name":             "oilfox",
-        "version":          "0.0.3",
-		"titleLang":        "en",
+		"news": {
+			"0.0.3": {
+                "en": "supported compact mode and hided password",
+				"de": "unterstützter Kompaktmodus und verstecktes Passwort",
+				"ru": "поддерживается компактный режим и скрытый пароль",
+				"pt": "modo compacto suportado e senha oculta",
+				"nl": "ondersteunde compacte modus en verborgen wachtwoord",
+				"fr": "mode compact supporté et mot de passe masqué",
+				"it": "modalità compatta supportata e password nascosta",
+				"es": "Modo compacto soportado y contraseña oculta",
+				"pl": "obsługiwane tryb kompaktowy i ukryte hasło"
+            },
+            "0.0.2": {
+                "en": "changed to scheduled adapter",
+				"de": "zu geplantem Adapter geändert",
+				"ru": "изменен на запланированный адаптер",
+				"pt": "mudou para o adaptador agendado",
+				"nl": "gewijzigd naar geplande adapter",
+				"fr": "changé en adaptateur planifié",
+				"it": "cambiato in adattatore programmato",
+				"es": "cambiado a adaptador programado",
+				"pl": "zmieniono na zaplanowany adapter"
+            },
+            "0.0.1": {
+                "en": "initial version",
+				"de": "erste Version",
+				"ru": "Первоначальная версия",
+				"pt": "versão inicial",
+				"nl": "eerste versie",
+				"fr": "version initiale",
+				"it": "versione iniziale",
+				"es": "versión inicial",
+				"pl": "początkowa wersja"
+            }
+        },        
+		"titleLang": {
+                "en": "Oilfox",
+				"de": "Oilfox",
+				"ru": "Oilfox",
+				"pt": "Oilfox",
+				"nl": "Oilfox",
+				"fr": "Oilfox",
+				"it": "Oilfox",
+				"es": "Oilfox",
+				"pl": "Oilfox"
+        },
+		"desc": {
+				"en": "iobroker adapter for oilfox oil sensor",
+				"de": "Iobroker-Adapter für Oilfox-Ölsensor",
+				"ru": "адаптер iobroker для датчика масла oilfox",
+				"pt": "Adaptador iobroker para sensor de óleo oilfox",
+				"nl": "iobroker-adapter voor oliefox-oliesensor",
+				"fr": "adaptateur iobroker pour capteur d'huile oilfox",
+				"it": "adattatore iobroker per sensore olio oilfox",
+				"es": "Adaptador iobroker para sensor de aceite oilfox",
+				"pl": "Adapter iobroker do czujnika oleju ropnego"
+        },
         "title":            "Oilfox",
-        "desc":             "Javascript/Node.js based Oilfox adapter",
+		"version":          "0.0.3",
         "platform":         "Javascript/Node.js",
         "mode":             "schedule",
 		"schedule":			"*/10 * * * *",
