@@ -23,17 +23,6 @@
 				"it": "cambiato in adattatore programmato",
 				"es": "cambiado a adaptador programado",
 				"pl": "zmieniono na zaplanowany adapter"
-            },
-            "0.0.1": {
-                "en": "initial version",
-				"de": "erste Version",
-				"ru": "Первоначальная версия",
-				"pt": "versão inicial",
-				"nl": "eerste versie",
-				"fr": "version initiale",
-				"it": "versione iniziale",
-				"es": "versión inicial",
-				"pl": "początkowa wersja"
             }
         },        
 		"titleLang": {
