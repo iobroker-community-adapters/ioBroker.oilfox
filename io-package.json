@@ -2,6 +2,17 @@
     "common": {
         "name":             "oilfox",
 		"news": {
+			"0.0.5": {
+				"en": "bugfix release",
+				"de": "Bugfix-Release",
+				"ru": "выпуск исправлений",
+				"pt": "liberação de correções",
+				"nl": "bugfix-release",
+				"fr": "correction de bug",
+				"it": "versione bugfix",
+				"es": "lanzamiento de corrección de errores",
+				"pl": "wydanie poprawki"
+            },			
 			"0.0.4": {
                 "en": "updated infos",
 				"de": "aktualisierte Infos",
@@ -59,7 +70,7 @@
 				"pl": "Adapter iobroker do czujnika oleju ropnego"
         },
         "title":            "Oilfox",
-		"version":          "0.0.4",
+		"version":          "0.0.5",
         "platform":         "Javascript/Node.js",
         "mode":             "schedule",
 		"schedule":			"*/10 * * * *",

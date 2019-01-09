@@ -13,22 +13,27 @@ let adapter;
 function startAdapter(options) {
 	options = options || {};
 	Object.assign(options, {
-	   name: adapterName,
-	   ready: function () {
-		   adapter.log.debug("adapter.on-ready: << READY >>");
+		name: adapterName,
+		ready: function () {
+			try {
+				adapter.log.debug("adapter.on-ready: << READY >>");
 
-			if (adapter.config.email && adapter.config.password) {
-				main();
-			} else {
-				adapter.log.warn('No E-Mail or Password set');
+				if (adapter.config.email && adapter.config.password) {
+					main();
+				} else {
+					adapter.log.warn('No E-Mail or Password set');
+					adapter.stop();
+				}
+			} catch (err) {
+				adapter.log.error(err);
 				adapter.stop();
 			}
-	   }
+		}
 	});
 	adapter = new utils.Adapter(options);
 
 	return adapter;
-});
+};
 
 function connectOilfox() {
 	let post_data = JSON.stringify({
@@ -68,7 +73,7 @@ function connectOilfox() {
 					adapter.log.debug("recieved data 2: " + summaryData);
 					let summaryObject = JSON.parse(summaryData);
 					let promises = createStateObjectsFromResult(summaryObject);
-					
+
 					adapter.log.debug("create state objects from summary");
 					Promise.all(promises).then(() => {
 						adapter.log.debug("update states from summary");
@@ -76,7 +81,7 @@ function connectOilfox() {
 					}).catch((err) => {
 						adapter.log.error("error: " + err);
 					});
-					
+
 					adapter.stop();
 				});
 			});
@@ -174,8 +179,8 @@ function updateStatesFromResult(summaryObject) {
 
 // If started as allInOne/compact mode => return function to create instance
 if (module && module.parent) {
-    module.exports = startAdapter;
+	module.exports = startAdapter;
 } else {
-    // or start the instance directly
-    startAdapter();
+	// or start the instance directly
+	startAdapter();
 } 
