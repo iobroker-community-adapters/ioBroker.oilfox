@@ -368,6 +368,98 @@ gulp.task('updatePackages', function (done) {
     done();
 });
 
+gulp.task('rename', function ()  {
+    let newname;
+    let author = '@@Author@@';
+    let email  = '@@email@@';
+    for (let a = 0; a < process.argv.length; a++) {
+        if (process.argv[a] === '--name') {
+            newname = process.argv[a + 1]
+        } else if (process.argv[a] === '--email') {
+            email = process.argv[a + 1]
+        } else if (process.argv[a] === '--author') {
+            author = process.argv[a + 1]
+        }
+    }
+
+
+    console.log('Try to rename to "' + newname + '"');
+    if (!newname) {
+        console.log('Please write the new template name, like: "gulp rename --name mywidgetset" --author "Author Name"');
+        process.exit();
+    }
+    if (newname.indexOf(' ') !== -1) {
+        console.log('Name may not have space in it.');
+        process.exit();
+    }
+    if (newname.toLowerCase() !== newname) {
+        console.log('Name must be lower case.');
+        process.exit();
+    }
+    if (fs.existsSync(__dirname + '/admin/template.png')) {
+        fs.renameSync(__dirname + '/admin/template.png',              __dirname + '/admin/' + newname + '.png');
+    }
+    if (fs.existsSync(__dirname + '/widgets/template.html')) {
+        fs.renameSync(__dirname + '/widgets/template.html',           __dirname + '/widgets/' + newname + '.html');
+    }
+    if (fs.existsSync(__dirname + '/widgets/template/js/template.js')) {
+        fs.renameSync(__dirname + '/widgets/template/js/template.js', __dirname + '/widgets/template/js/' + newname + '.js');
+    }
+    if (fs.existsSync(__dirname + '/widgets/template')) {
+        fs.renameSync(__dirname + '/widgets/template',                __dirname + '/widgets/' + newname);
+    }
+    let patterns = [
+        {
+            match: /ioBroker template Adapter/g,
+            replacement: newname
+        },
+        {
+            match: /template/g,
+            replacement: newname
+        },
+        {
+            match: /Template/g,
+            replacement: newname ? (newname[0].toUpperCase() + newname.substring(1)) : 'Template'
+        },
+        {
+            match: /@@Author@@/g,
+            replacement: author
+        },
+        {
+            match: /@@email@@/g,
+            replacement: email
+        }
+    ];
+    let files = [
+        __dirname + '/io-package.json',
+        __dirname + '/LICENSE',
+        __dirname + '/package.json',
+        __dirname + '/README.md',
+        __dirname + '/main.js',
+        __dirname + '/gulpfile.js',
+        __dirname + '/widgets/' + newname +'.html',
+        __dirname + '/www/index.html',
+        __dirname + '/admin/index.html',
+        __dirname + '/admin/index_m.html',
+        __dirname + '/widgets/' + newname + '/js/' + newname +'.js',
+        __dirname + '/widgets/' + newname + '/css/style.css'
+    ];
+    files.forEach(function (f) {
+        try {
+            if (fs.existsSync(f)) {
+                let data = fs.readFileSync(f).toString('utf-8');
+                for (let r = 0; r < patterns.length; r++) {
+                    data = data.replace(patterns[r].match, patterns[r].replacement);
+                }
+                fs.writeFileSync(f, data);
+            }
+        } catch (e) {
+
+        }
+    });
+});
+
+
 gulp.task('updateReadme', function (done) {
     const readme = fs.readFileSync('README.md').toString();
     const pos = readme.indexOf('## Changelog\n');
@@ -390,6 +482,65 @@ gulp.task('updateReadme', function (done) {
         }
     }
     done();
+});
+
+const translate   = require('@vitalets/google-translate-api');
+
+async function translateText(text, lang) {
+	let res = await translate(text, {to: lang, from: 'en'});
+	return res.text;
+}
+
+async function translateNotExisting(obj, baseText) {
+	let t = obj['en'];
+	if (!t)
+		t = baseText;
+
+	if (t) {
+		for (let l in languages) {
+			if (!obj[l]) {
+				obj[l] = await translateText(t, l);
+			}
+		}
+	}
+}
+
+gulp.task('translate', async function (done) {
+	if (iopackage && iopackage.common) {
+		if (iopackage.common.news) {
+			for (let k in iopackage.common.news) {
+				let nw = iopackage.common.news[k];
+				await translateNotExisting(nw)
+			}
+		}
+		if (iopackage.common.titleLang) {
+			await translateNotExisting(iopackage.common.titleLang, iopackage.common.title)
+		}
+		if (iopackage.common.desc) {
+			await translateNotExisting(iopackage.common.desc)
+		}
+		
+		if (fs.existsSync('./admin/i18n/en/translations.json')) {
+			let enTranslations = require('./admin/i18n/en/translations.json');
+			for (let l in languages) {
+				let existing = {};
+				if (fs.existsSync('./admin/i18n/' + l +'/translations.json')) {
+					existing = require('./admin/i18n/' + l + '/translations.json');
+				}
+				for (let t in enTranslations) {
+					if (!existing[t]) {
+						existing[t] = await translateText(enTranslations[t], l);
+					}					
+				}
+				if (!fs.existsSync('./admin/i18n/' + l +'/')) {
+					fs.mkdirSync('./admin/i18n/' + l +'/');
+				}
+				fs.writeFileSync('./admin/i18n/' + l + '/translations.json', JSON.stringify(existing, null, 4));
+			}
+		}
+		
+	}
+    fs.writeFileSync('io-package.json', JSON.stringify(iopackage, null, 4));
 });
 
 gulp.task('default', gulp.series('updatePackages', 'updateReadme'));

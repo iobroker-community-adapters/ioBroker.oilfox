@@ -1,102 +1,119 @@
 {
     "common": {
-        "name":             "oilfox",
-		"news": {
-			"0.0.5": {
-				"en": "bugfix release",
-				"de": "Bugfix-Release",
-				"ru": "выпуск исправлений",
-				"pt": "liberação de correções",
-				"nl": "bugfix-release",
-				"fr": "correction de bug",
-				"it": "versione bugfix",
-				"es": "lanzamiento de corrección de errores",
-				"pl": "wydanie poprawki"
-            },			
-			"0.0.4": {
-                "en": "updated infos",
-				"de": "aktualisierte Infos",
-				"ru": "обновленная информация",
-				"pt": "informações atualizadas",
-				"nl": "bijgewerkte informatie",
-				"fr": "informations mises à jour",
-				"it": "informazioni aggiornate",
-				"es": "infos actualizados",
-				"pl": "zaktualizowane informacje"
+        "name": "oilfox",
+        "news": {
+            "0.0.6": {
+                "en": "add new translations",
+                "de": "Neue Übersetzungen hinzufügen",
+                "ru": "добавить новые переводы",
+                "pt": "adicionar novas traduções",
+                "nl": "voeg nieuwe vertalingen toe",
+                "fr": "ajouter de nouvelles traductions",
+                "it": "aggiungi nuove traduzioni",
+                "es": "añadir nuevas traducciones",
+                "pl": "dodaj nowe tłumaczenia",
+                "zh-cn": "添加新的翻译"
             },
-			"0.0.3": {
+            "0.0.5": {
+                "en": "bugfix release",
+                "de": "Bugfix-Release",
+                "ru": "выпуск исправлений",
+                "pt": "liberação de correções",
+                "nl": "bugfix-release",
+                "fr": "correction de bug",
+                "it": "versione bugfix",
+                "es": "lanzamiento de corrección de errores",
+                "pl": "wydanie poprawki",
+                "zh-cn": "bugfix发布"
+            },
+            "0.0.4": {
+                "en": "updated infos",
+                "de": "aktualisierte Infos",
+                "ru": "обновленная информация",
+                "pt": "informações atualizadas",
+                "nl": "bijgewerkte informatie",
+                "fr": "informations mises à jour",
+                "it": "informazioni aggiornate",
+                "es": "infos actualizados",
+                "pl": "zaktualizowane informacje",
+                "zh-cn": "更新的信息"
+            },
+            "0.0.3": {
                 "en": "supported compact mode and hided password",
-				"de": "unterstützter Kompaktmodus und verstecktes Passwort",
-				"ru": "поддерживается компактный режим и скрытый пароль",
-				"pt": "modo compacto suportado e senha oculta",
-				"nl": "ondersteunde compacte modus en verborgen wachtwoord",
-				"fr": "mode compact supporté et mot de passe masqué",
-				"it": "modalità compatta supportata e password nascosta",
-				"es": "Modo compacto soportado y contraseña oculta",
-				"pl": "obsługiwane tryb kompaktowy i ukryte hasło"
+                "de": "unterstützter Kompaktmodus und verstecktes Passwort",
+                "ru": "поддерживается компактный режим и скрытый пароль",
+                "pt": "modo compacto suportado e senha oculta",
+                "nl": "ondersteunde compacte modus en verborgen wachtwoord",
+                "fr": "mode compact supporté et mot de passe masqué",
+                "it": "modalità compatta supportata e password nascosta",
+                "es": "Modo compacto soportado y contraseña oculta",
+                "pl": "obsługiwane tryb kompaktowy i ukryte hasło",
+                "zh-cn": "支持紧凑模式和隐藏密码"
             },
             "0.0.2": {
                 "en": "changed to scheduled adapter",
-				"de": "zu geplantem Adapter geändert",
-				"ru": "изменен на запланированный адаптер",
-				"pt": "mudou para o adaptador agendado",
-				"nl": "gewijzigd naar geplande adapter",
-				"fr": "changé en adaptateur planifié",
-				"it": "cambiato in adattatore programmato",
-				"es": "cambiado a adaptador programado",
-				"pl": "zmieniono na zaplanowany adapter"
+                "de": "zu geplantem Adapter geändert",
+                "ru": "изменен на запланированный адаптер",
+                "pt": "mudou para o adaptador agendado",
+                "nl": "gewijzigd naar geplande adapter",
+                "fr": "changé en adaptateur planifié",
+                "it": "cambiato in adattatore programmato",
+                "es": "cambiado a adaptador programado",
+                "pl": "zmieniono na zaplanowany adapter",
+                "zh-cn": "更改为计划适配器"
             }
-        },        
-		"titleLang": {
-                "en": "Oilfox",
-				"de": "Oilfox",
-				"ru": "Oilfox",
-				"pt": "Oilfox",
-				"nl": "Oilfox",
-				"fr": "Oilfox",
-				"it": "Oilfox",
-				"es": "Oilfox",
-				"pl": "Oilfox"
         },
-		"desc": {
-				"en": "iobroker adapter for oilfox oil sensor",
-				"de": "Iobroker-Adapter für Oilfox-Ölsensor",
-				"ru": "адаптер iobroker для датчика масла oilfox",
-				"pt": "Adaptador iobroker para sensor de óleo oilfox",
-				"nl": "iobroker-adapter voor oliefox-oliesensor",
-				"fr": "adaptateur iobroker pour capteur d'huile oilfox",
-				"it": "adattatore iobroker per sensore olio oilfox",
-				"es": "Adaptador iobroker para sensor de aceite oilfox",
-				"pl": "Adapter iobroker do czujnika oleju ropnego"
+        "titleLang": {
+            "en": "Oilfox",
+            "de": "Oilfox",
+            "ru": "Oilfox",
+            "pt": "Oilfox",
+            "nl": "Oilfox",
+            "fr": "Oilfox",
+            "it": "Oilfox",
+            "es": "Oilfox",
+            "pl": "Oilfox",
+            "zh-cn": "Oilfox"
         },
-        "title":            "Oilfox",
-		"version":          "0.0.5",
-        "platform":         "Javascript/Node.js",
-        "mode":             "schedule",
-		"schedule":			"*/10 * * * *",
-        "icon":             "oilfox.png",
-        "materialize":      true,
-        "enabled":          true,
-        "messagebox":       false,
-        "loglevel":         "info",
-        "keywords":         ["oilfox"],
-        "nondeletable":     false,
-        "type":             "hardware",
-        "authors": 	        ["jochen kuehner <jochen.kuehner@gmx.de>"],
-        "license":          "MIT",
-        "readme":           "https://github.com/iobroker-community-adapters/ioBroker.oilfox/blob/master/README.md",
-        "extIcon":          "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/admin/oilfox.png",
-		"compact":          true
+        "desc": {
+            "en": "iobroker adapter for oilfox oil sensor",
+            "de": "Iobroker-Adapter für Oilfox-Ölsensor",
+            "ru": "адаптер iobroker для датчика масла oilfox",
+            "pt": "Adaptador iobroker para sensor de óleo oilfox",
+            "nl": "iobroker-adapter voor oliefox-oliesensor",
+            "fr": "adaptateur iobroker pour capteur d'huile oilfox",
+            "it": "adattatore iobroker per sensore olio oilfox",
+            "es": "Adaptador iobroker para sensor de aceite oilfox",
+            "pl": "Adapter iobroker do czujnika oleju ropnego",
+            "zh-cn": "用于oilfox油传感器的iobroker适配器"
+        },
+        "title": "Oilfox",
+        "version": "0.0.6",
+        "platform": "Javascript/Node.js",
+        "mode": "schedule",
+        "schedule": "*/10 * * * *",
+        "icon": "oilfox.png",
+        "materialize": true,
+        "enabled": true,
+        "messagebox": false,
+        "loglevel": "info",
+        "keywords": [
+            "oilfox"
+        ],
+        "nondeletable": false,
+        "type": "hardware",
+        "authors": [
+            "jochen kuehner <jochen.kuehner@gmx.de>"
+        ],
+        "license": "MIT",
+        "readme": "https://github.com/iobroker-community-adapters/ioBroker.oilfox/blob/master/README.md",
+        "extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/admin/oilfox.png",
+        "compact": true
     },
-    
-	"native": {
+    "native": {
         "email": "",
         "password": ""
     },
-	
-    "objects": [
-    ],
-    
-    "instanceObjects": [
-    ]
+    "objects": [],
+    "instanceObjects": []
 }
