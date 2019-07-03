@@ -2,6 +2,18 @@
     "common": {
         "name": "oilfox",
         "news": {
+            "0.0.7": {
+                "en": "update node modules",
+                "de": "Knotenmodule aktualisieren",
+                "ru": "обновить узлы модулей",
+                "pt": "atualizar os módulos do nó",
+                "nl": "update knoopmodules",
+                "fr": "mise à jour des modules de noeud",
+                "it": "aggiornare i moduli del nodo",
+                "es": "actualizar los módulos de nodo",
+                "pl": "zaktualizuj moduły węzłów",
+                "zh-cn": "更新节点模块"
+            },
             "0.0.6": {
                 "en": "add new translations",
                 "de": "Neue Übersetzungen hinzufügen",
@@ -88,7 +100,7 @@
             "zh-cn": "用于oilfox油传感器的iobroker适配器"
         },
         "title": "Oilfox",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
         "schedule": "*/10 * * * *",
