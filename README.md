@@ -1,7 +1,7 @@
 ![Logo](img/oilfox.png)
 # ioBroker.oilfox
 
-[![NPM version](http://img.shields.io/npm/v/iobroker.oilfox.svg)](https://www.npmjs.com/package/iobroker.oilfox)
+![Number of Installations](http://iobroker.live/badges/oilfox-installed.svg) ![Number of Installations](http://iobroker.live/badges/oilfox-stable.svg) [![NPM version](http://img.shields.io/npm/v/iobroker.oilfox.svg)](https://www.npmjs.com/package/iobroker.oilfox)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.oilfox.svg)](https://www.npmjs.com/package/iobroker.oilfox)
 [![Build Status](https://travis-ci.org/iobroker-community-adapters/ioBroker.oilfox.svg?branch=master)](https://travis-ci.org/iobroker-community-adapters/ioBroker.oilfox.svg?branch=master)
 
