@@ -2,6 +2,18 @@
     "common": {
         "name": "oilfox",
         "news": {
+            "1.0.0": {
+                "en": "support multiple oilfox",
+                "de": "unterstützen mehrere oilfox",
+                "ru": "поддерживает несколько oilfox",
+                "pt": "apoiar múltipla oilfox",
+                "nl": "ondersteuning voor meerdere oilfox",
+                "fr": "appuyer plusieurs oilfox",
+                "it": "sostenere oilfox multipla",
+                "es": "soportar múltiples Oilfox",
+                "pl": "obsługuje wielokrotnego oilfox",
+                "zh-cn": "支持多种oilfox"
+            },
             "0.0.7": {
                 "en": "update node modules",
                 "de": "Knotenmodule aktualisieren",

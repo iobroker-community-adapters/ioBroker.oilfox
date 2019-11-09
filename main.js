@@ -75,9 +75,9 @@ function connectOilfox() {
 					let promises = createStateObjectsFromResult(summaryObject);
 
 					adapter.log.debug("create state objects from summary");
-					Promise.all(promises).then(() => {
+					Promise.all(promises).then(async () => {
 						adapter.log.debug("update states from summary");
-						updateStatesFromResult(summaryObject);
+						await updateStatesFromResult(summaryObject);
 					}).catch((err) => {
 						adapter.log.error("error: " + err);
 					});
@@ -154,26 +154,42 @@ function createStateObjectsFromResult(summaryObject) {
 	return promises;
 }
 
-function updateStatesFromResult(summaryObject) {
-	for (let p in summaryObject) {
-		if (typeof summaryObject[p] !== 'object') {
-			adapter.setState('info.' + p, summaryObject[p], true);
-		}
-	}
-	let j = 0;
-	for (let p in summaryObject.devices) {
-		for (let pp in summaryObject.devices[p]) {
-			if (typeof summaryObject.devices[p][pp] !== 'object') {
-				adapter.setState('devices.' + j + '.' + pp, summaryObject.devices[p][pp], true);
+async function updateStatesFromResult(summaryObject) {
+	try {
+		for (let p in summaryObject) {
+			if (typeof summaryObject[p] !== 'object') {
+				adapter.setState('info.' + p, summaryObject[p], true);
 			}
 		}
 
-		for (let pp in summaryObject.devices[p].metering) {
-			if (typeof summaryObject.devices[p].metering[pp] !== 'object') {
-				adapter.setState('devices.' + j + '.metering.' + pp, summaryObject.devices[p].metering[pp], true);
+		for (let p in summaryObject.devices) {
+			let j = 0;
+			let state = null;
+			while (j < summaryObject.devices.length) {
+				state = await adapter.getStateAsync('devices.' + j + '.id');
+				if (state != null && state.val == summaryObject.devices[p].id) {
+					break;
+				}
+				else
+					state = null;
+			}
+			if (state) {
+				for (let pp in summaryObject.devices[p]) {
+					if (typeof summaryObject.devices[p][pp] !== 'object') {
+						adapter.setState('devices.' + j + '.' + pp, summaryObject.devices[p][pp], true);
+					}
+				}
+
+				for (let pp in summaryObject.devices[p].metering) {
+					if (typeof summaryObject.devices[p].metering[pp] !== 'object') {
+						adapter.setState('devices.' + j + '.metering.' + pp, summaryObject.devices[p].metering[pp], true);
+					}
+				}
 			}
 		}
-		j++;
+	}
+	catch (err) {
+		adapter.log.error(err);
 	}
 }
 
