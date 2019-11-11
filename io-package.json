@@ -2,6 +2,18 @@
     "common": {
         "name": "oilfox",
         "news": {
+            "1.0.1": {
+                "en": "fix version",
+                "de": "fix version",
+                "ru": "затруднительная версия",
+                "pt": "fix version",
+                "nl": "fix versie",
+                "fr": "version fixe",
+                "it": "versione fissa",
+                "es": "fix version",
+                "pl": "fix version",
+                "zh-cn": "修复版本"
+            },
             "1.0.0": {
                 "en": "support multiple oilfox",
                 "de": "unterstützen mehrere oilfox",
@@ -112,7 +124,7 @@
             "zh-cn": "用于oilfox油传感器的iobroker适配器"
         },
         "title": "Oilfox",
-        "version": "0.0.7",
+        "version": "1.0.1",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
         "schedule": "*/10 * * * *",
