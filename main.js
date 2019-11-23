@@ -44,14 +44,15 @@ function connectOilfox() {
 	let request_options = {
 		host: 'api.oilfox.io',
 		port: '443',
-		path: '/v2/backoffice/session',
+		path: '/v3/login',
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
 			'Connection': 'Keep-Alive',
 			'User-Agent': 'okhttp/3.2.0',
 			'Content-Length': post_data.length,
-			'Accept': '*/*'
+			'Accept': '*/*',
+			'User-Agent': 'ioBroker.oilfox'
 		}
 	};
 
@@ -62,8 +63,8 @@ function connectOilfox() {
 		tokenRequestResult.on('end', () => {
 			adapter.log.debug("recieved data: " + tokenData);
 			let tokenObject = JSON.parse(tokenData);
-			request_options.headers['X-Auth-Token'] = tokenObject.token;
-			request_options.path = '/v2/user/summary';
+			request_options.headers['Authorization'] = 'Bearer ' + tokenObject.access_token;
+			request_options.path = '/v3/user/summary';
 			request_options.method = 'GET';
 			let summaryRequest = https.request(request_options, (summaryRequestResult) => {
 				summaryRequestResult.setEncoding('utf8');

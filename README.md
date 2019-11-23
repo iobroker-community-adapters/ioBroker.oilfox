@@ -14,6 +14,10 @@ This adapter allows to get data from the oilfox sensor via the Oilfox Website.
 * specify the your e-mail and password in the configuration page
 
 ## Changelog
+
+### 2.0.0 (2019.11.23)
+* (jogibear9988) update to new api
+
 ### 1.0.0 (2019.11.09)
 * (jogibear9988) support multiple oilfox
 
