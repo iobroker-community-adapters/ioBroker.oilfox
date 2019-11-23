@@ -2,7 +2,7 @@
     "common": {
         "name": "oilfox",
         "news": {
-            "2.0.0": {
+            "2.0.1": {
                 "en": "update to new api",
                 "de": "Update auf neue api",
                 "ru": "обновление нового API",
@@ -136,7 +136,7 @@
             "zh-cn": "用于oilfox油传感器的iobroker适配器"
         },
         "title": "Oilfox",
-        "version": "2.0.0",
+        "version": "2.0.1",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
         "schedule": "*/59 * * * *",
