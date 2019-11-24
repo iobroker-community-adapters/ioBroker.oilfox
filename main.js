@@ -168,7 +168,7 @@ async function updateStatesFromResult(summaryObject) {
 			let state = null;
 			while (j < summaryObject.devices.length) {
 				state = await adapter.getStateAsync('devices.' + j + '.id');
-				if (state != null && state.val == summaryObject.devices[p].id) {
+				if (state != null && (!state.val || state.val == summaryObject.devices[p].id)) {
 					break;
 				}
 				else
