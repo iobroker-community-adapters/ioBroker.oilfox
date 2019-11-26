@@ -2,6 +2,18 @@
     "common": {
         "name": "oilfox",
         "news": {
+            "2.1.0": {
+                "en": "fix first run",
+                "de": "fix ersten Lauf",
+                "ru": "зафиксировать первый запуск",
+                "pt": "corrigir primeira execução",
+                "nl": "fix eerste run",
+                "fr": "fixer la première course",
+                "it": "risolvere prima esecuzione",
+                "es": "fijar la primera carrera",
+                "pl": "naprawić pierwszy bieg",
+                "zh-cn": "解决第一次运行"
+            },
             "2.0.1": {
                 "en": "update to new api",
                 "de": "Update auf neue api",
@@ -136,7 +148,7 @@
             "zh-cn": "用于oilfox油传感器的iobroker适配器"
         },
         "title": "Oilfox",
-        "version": "2.0.1",
+        "version": "2.1.0",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
         "schedule": "*/59 * * * *",

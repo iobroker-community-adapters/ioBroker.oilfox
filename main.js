@@ -171,6 +171,10 @@ async function updateStatesFromResult(summaryObject) {
 				if (state != null && (!state.val || state.val == summaryObject.devices[p].id)) {
 					break;
 				}
+				else if (state == null) {
+					state = true; //first run
+					break;
+				}
 				else
 					state = null;
 			}
