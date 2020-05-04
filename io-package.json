@@ -2,6 +2,9 @@
     "common": {
         "name": "oilfox",
         "news": {
+            "2.2.0": {
+                "en": "update dependencies"
+            },
             "2.1.0": {
                 "en": "fix first run",
                 "de": "fix ersten Lauf",
@@ -148,7 +151,7 @@
             "zh-cn": "用于oilfox油传感器的iobroker适配器"
         },
         "title": "Oilfox",
-        "version": "2.1.0",
+        "version": "2.2.0",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
         "schedule": "*/59 * * * *",
