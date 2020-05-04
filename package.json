@@ -24,7 +24,7 @@
     "url": "git+https://github.com/iobroker-community-adapters/ioBroker.oilfox.git"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^1.0.3"
+    "@iobroker/adapter-core": "^2.0.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
