@@ -163,8 +163,8 @@ async function updateStatesFromResult(summaryObject) {
 			}
 		}
 
+		let j = 0;
 		for (let p in summaryObject.devices) {
-			let j = 0;
 			let state = null;
 			while (j < summaryObject.devices.length) {
 				state = await adapter.getStateAsync('devices.' + j + '.id');
@@ -191,6 +191,7 @@ async function updateStatesFromResult(summaryObject) {
 					}
 				}
 			}
+			j++;
 		}
 	}
 	catch (err) {
