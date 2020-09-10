@@ -64,7 +64,7 @@ function connectOilfox() {
 			adapter.log.debug("recieved data: " + tokenData);
 			let tokenObject = JSON.parse(tokenData);
 			request_options.headers['Authorization'] = 'Bearer ' + tokenObject.access_token;
-			request_options.path = '/v3/user/summary';
+			request_options.path = '/v4/summary';
 			request_options.method = 'GET';
 			let summaryRequest = https.request(request_options, (summaryRequestResult) => {
 				summaryRequestResult.setEncoding('utf8');
@@ -205,4 +205,4 @@ if (module && module.parent) {
 } else {
 	// or start the instance directly
 	startAdapter();
-} 
+}
