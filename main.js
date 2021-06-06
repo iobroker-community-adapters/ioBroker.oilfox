@@ -163,9 +163,10 @@ async function updateStatesFromResult(summaryObject) {
 			}
 		}
 
-		let j = 0;
+		
 		for (let p in summaryObject.devices) {
 			let state = null;
+			let j = 0;
 			while (j < summaryObject.devices.length) {
 				state = await adapter.getStateAsync('devices.' + j + '.id');
 				if (state != null && (!state.val || state.val == summaryObject.devices[p].id)) {
@@ -175,8 +176,9 @@ async function updateStatesFromResult(summaryObject) {
 					state = true; //first run
 					break;
 				}
-				else
-					state = null;
+				
+				state = null;
+				j++;
 			}
 			if (state) {
 				for (let pp in summaryObject.devices[p]) {
@@ -191,7 +193,6 @@ async function updateStatesFromResult(summaryObject) {
 					}
 				}
 			}
-			j++;
 		}
 	}
 	catch (err) {
