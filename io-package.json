@@ -159,6 +159,8 @@
             "pl": "Adapter iobroker do czujnika oleju ropnego",
             "zh-cn": "用于oilfox油传感器的iobroker适配器"
         },
+		"connectionType": "cloud",
+		"dataSource": "poll",
         "title": "Oilfox",
         "version": "3.1.0",
         "platform": "Javascript/Node.js",
