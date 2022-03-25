@@ -1,6 +1,6 @@
 {
   "name": "iobroker.oilfox",
-  "version": "2.1.0",
+  "version": "3.1.0",
   "description": "Oilfox Adapter for ioBroker",
   "author": {
     "name": "Jochen Kuehner",
@@ -24,15 +24,15 @@
     "url": "git+https://github.com/iobroker-community-adapters/ioBroker.oilfox.git"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^1.0.3"
+    "@iobroker/adapter-core": "^2.4.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "gulp": "^4.0.2",
-    "mocha": "^6.2.2",
+    "mocha": "^8.2.1",
     "@vitalets/google-translate-api": "github:vitalets/google-translate-api",
-    "configstore": "^5.0.0",
-    "request": "^2.88.0",
+    "configstore": "^6.0.0",
+    "request": "^2.88.2",
     "safe-eval": "^0.4.1"
   },
   "bugs": {

@@ -2,6 +2,18 @@
     "common": {
         "name": "oilfox",
         "news": {
+			"3.1.0": {
+                "en": "fix multiple oilfox"
+            },
+            "3.0.0": {
+                "en": "fix api after changes"
+            },
+            "2.3.0": {
+                "en": "fix for multiple oilfoxes"
+            },
+            "2.2.0": {
+                "en": "update dependencies"
+            },
             "2.1.0": {
                 "en": "fix first run",
                 "de": "fix ersten Lauf",
@@ -147,8 +159,10 @@
             "pl": "Adapter iobroker do czujnika oleju ropnego",
             "zh-cn": "用于oilfox油传感器的iobroker适配器"
         },
+		"connectionType": "cloud",
+		"dataSource": "poll",
         "title": "Oilfox",
-        "version": "2.1.0",
+        "version": "3.1.0",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
         "schedule": "*/59 * * * *",

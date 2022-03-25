@@ -64,7 +64,7 @@ function connectOilfox() {
 			adapter.log.debug("recieved data: " + tokenData);
 			let tokenObject = JSON.parse(tokenData);
 			request_options.headers['Authorization'] = 'Bearer ' + tokenObject.access_token;
-			request_options.path = '/v3/user/summary';
+			request_options.path = '/v4/summary';
 			request_options.method = 'GET';
 			let summaryRequest = https.request(request_options, (summaryRequestResult) => {
 				summaryRequestResult.setEncoding('utf8');
@@ -135,14 +135,14 @@ function createStateObjectsFromResult(summaryObject) {
 			}
 		}
 
-		for (let pp in summaryObject.devices[p].metering) {
-			if (typeof summaryObject.devices[p].metering[pp] !== 'object') {
+		for (let pp in summaryObject.devices[p].lastMetering) {
+			if (typeof summaryObject.devices[p].lastMetering[pp] !== 'object') {
 				promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.metering.' + pp, {
 					type: 'state',
 					common: {
 						'name': 'device.metering.' + pp,
 						'role': 'state',
-						'type': typeof summaryObject.devices[p].metering[pp],
+						'type': typeof summaryObject.devices[p].lastMetering[pp],
 						'write': false,
 						'read': true
 					},
@@ -163,9 +163,10 @@ async function updateStatesFromResult(summaryObject) {
 			}
 		}
 
+		
 		for (let p in summaryObject.devices) {
-			let j = 0;
 			let state = null;
+			let j = 0;
 			while (j < summaryObject.devices.length) {
 				state = await adapter.getStateAsync('devices.' + j + '.id');
 				if (state != null && (!state.val || state.val == summaryObject.devices[p].id)) {
@@ -175,8 +176,9 @@ async function updateStatesFromResult(summaryObject) {
 					state = true; //first run
 					break;
 				}
-				else
-					state = null;
+				
+				state = null;
+				j++;
 			}
 			if (state) {
 				for (let pp in summaryObject.devices[p]) {
@@ -185,9 +187,9 @@ async function updateStatesFromResult(summaryObject) {
 					}
 				}
 
-				for (let pp in summaryObject.devices[p].metering) {
-					if (typeof summaryObject.devices[p].metering[pp] !== 'object') {
-						adapter.setState('devices.' + j + '.metering.' + pp, summaryObject.devices[p].metering[pp], true);
+				for (let pp in summaryObject.devices[p].lastMetering) {
+					if (typeof summaryObject.devices[p].lastMetering[pp] !== 'object') {
+						adapter.setState('devices.' + j + '.metering.' + pp, summaryObject.devices[p].lastMetering[pp], true);
 					}
 				}
 			}
@@ -204,4 +206,4 @@ if (module && module.parent) {
 } else {
 	// or start the instance directly
 	startAdapter();
-} 
+}

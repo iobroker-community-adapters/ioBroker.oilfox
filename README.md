@@ -5,7 +5,7 @@
 [![Downloads](https://img.shields.io/npm/dm/iobroker.oilfox.svg)](https://www.npmjs.com/package/iobroker.oilfox)
 [![Build Status](https://travis-ci.org/iobroker-community-adapters/ioBroker.oilfox.svg?branch=master)](https://travis-ci.org/iobroker-community-adapters/ioBroker.oilfox.svg?branch=master)
 
-[![NPM](https://nodei.co/npm/iobroker.oilfox.png?downloads=true)](https://nodei.co/npm/iobroker.oilfox/) [![Greenkeeper badge](https://badges.greenkeeper.io/iobroker-community-adapters/ioBroker.oilfox.svg)](https://greenkeeper.io/)
+[![NPM](https://nodei.co/npm/iobroker.oilfox.png?downloads=true)](https://nodei.co/npm/iobroker.oilfox/) 
 
 ## Description
 This adapter allows to get data from the oilfox sensor via the Oilfox Website.
@@ -14,6 +14,12 @@ This adapter allows to get data from the oilfox sensor via the Oilfox Website.
 * specify the your e-mail and password in the configuration page
 
 ## Changelog
+
+### 3.1.0 (2021.06.06)
+* (jogibear9988) fix multiple oilfox
+
+### 3.0.0 (2020.09.10)
+* (bazidibavaria) fixes after api changes
 
 ### 2.1.0 (2019.11.26)
 * (jogibear9988) fix first run
@@ -49,7 +55,7 @@ This adapter allows to get data from the oilfox sensor via the Oilfox Website.
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2018-2019 jogibear9988 <jochen.kuehner@gmx.de>
+Copyright (c) 2018-2021 jogibear9988 <jochen.kuehner@gmx.de>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
