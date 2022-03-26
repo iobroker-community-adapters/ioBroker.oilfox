@@ -49,7 +49,7 @@ function connectOilfox() {
 		headers: {
 			'Content-Type': 'application/json',
 			'Connection': 'Keep-Alive',
-			'User-Agent': 'okhttp/3.2.0',
+			//'User-Agent': 'okhttp/3.2.0',
 			'Content-Length': post_data.length,
 			'Accept': '*/*',
 			'User-Agent': 'ioBroker.oilfox'
@@ -148,7 +148,7 @@ async function updateStatesFromResult(summaryObject) {
 			}
 		}
 
-		
+
 		for (let p in summaryObject.items) {
 			let state = null;
 			let j = 0;
@@ -161,7 +161,7 @@ async function updateStatesFromResult(summaryObject) {
 					state = true; //first run
 					break;
 				}
-				
+
 				state = null;
 				j++;
 			}
