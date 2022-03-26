@@ -109,7 +109,7 @@ describe('Test ' + adapterShortName + ' adapter', function() {
 
         setup.stopController(function (normalTerminated) {
             console.log('Adapter normal terminated: ' + normalTerminated);
-            done();
+            setTimeout(done, 3000);
         });
     });
 });
