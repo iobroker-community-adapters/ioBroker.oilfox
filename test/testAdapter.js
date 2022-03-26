@@ -100,8 +100,8 @@ describe('Test ' + adapterShortName + ' adapter', function() {
 
 
     it('Test ' + adapterShortName + ' adapter: Check nothing', function (done) {
-        this.timeout(1000);
-        done();
+        this.timeout(10000);
+        setTimeout(done, 10000);
     });
 
     after('Test ' + adapterShortName + ' adapter: Stop js-controller', function (done) {
