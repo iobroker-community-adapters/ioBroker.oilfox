@@ -44,7 +44,7 @@ function connectOilfox() {
 	let request_options = {
 		host: 'api.oilfox.io',
 		port: '443',
-		path: '/v3/login',
+		path: '/customer-api/v1/login',
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ function connectOilfox() {
 			adapter.log.debug("recieved data: " + tokenData);
 			let tokenObject = JSON.parse(tokenData);
 			request_options.headers['Authorization'] = 'Bearer ' + tokenObject.access_token;
-			request_options.path = '/v4/summary';
+			request_options.path = '/customer-api/v1/device';
 			request_options.method = 'GET';
 			let summaryRequest = https.request(request_options, (summaryRequestResult) => {
 				summaryRequestResult.setEncoding('utf8');
@@ -118,15 +118,15 @@ function createStateObjectsFromResult(summaryObject) {
 		}
 	}
 	let i = 0;
-	for (let p in summaryObject.devices) {
-		for (let pp in summaryObject.devices[p]) {
-			if (typeof summaryObject.devices[p][pp] !== 'object') {
-				promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.' + pp, {
+	for (let p in summaryObject.items) {
+		for (let pp in summaryObject.items[p]) {
+			if (typeof summaryObject.items[p][pp] !== 'object') {
+				promises.push(adapter.setObjectNotExistsAsync('items.' + i + '.' + pp, {
 					type: 'state',
 					common: {
 						'name': 'device.' + pp,
 						'role': 'state',
-						'type': typeof summaryObject.devices[p][pp],
+						'type': typeof summaryObject.items[p][pp],
 						'write': false,
 						'read': true
 					},
@@ -135,21 +135,6 @@ function createStateObjectsFromResult(summaryObject) {
 			}
 		}
 
-		for (let pp in summaryObject.devices[p].lastMetering) {
-			if (typeof summaryObject.devices[p].lastMetering[pp] !== 'object') {
-				promises.push(adapter.setObjectNotExistsAsync('devices.' + i + '.metering.' + pp, {
-					type: 'state',
-					common: {
-						'name': 'device.metering.' + pp,
-						'role': 'state',
-						'type': typeof summaryObject.devices[p].lastMetering[pp],
-						'write': false,
-						'read': true
-					},
-					native: {}
-				}));
-			}
-		}
 		i++;
 	}
 	return promises;
@@ -164,12 +149,12 @@ async function updateStatesFromResult(summaryObject) {
 		}
 
 		
-		for (let p in summaryObject.devices) {
+		for (let p in summaryObject.items) {
 			let state = null;
 			let j = 0;
-			while (j < summaryObject.devices.length) {
-				state = await adapter.getStateAsync('devices.' + j + '.id');
-				if (state != null && (!state.val || state.val == summaryObject.devices[p].id)) {
+			while (j < summaryObject.items.length) {
+				state = await adapter.getStateAsync('items.' + j + '.id');
+				if (state != null && (!state.val || state.val == summaryObject.items[p].id)) {
 					break;
 				}
 				else if (state == null) {
@@ -181,15 +166,9 @@ async function updateStatesFromResult(summaryObject) {
 				j++;
 			}
 			if (state) {
-				for (let pp in summaryObject.devices[p]) {
-					if (typeof summaryObject.devices[p][pp] !== 'object') {
-						adapter.setState('devices.' + j + '.' + pp, summaryObject.devices[p][pp], true);
-					}
-				}
-
-				for (let pp in summaryObject.devices[p].lastMetering) {
-					if (typeof summaryObject.devices[p].lastMetering[pp] !== 'object') {
-						adapter.setState('devices.' + j + '.metering.' + pp, summaryObject.devices[p].lastMetering[pp], true);
+				for (let pp in summaryObject.items[p]) {
+					if (typeof summaryObject.items[p][pp] !== 'object') {
+						adapter.setState('items.' + j + '.' + pp, summaryObject.items[p][pp], true);
 					}
 				}
 			}

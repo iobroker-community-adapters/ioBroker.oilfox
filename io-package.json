@@ -2,7 +2,10 @@
     "common": {
         "name": "oilfox",
         "news": {
-			"3.1.0": {
+	    "4.0.0": {
+               	"en": "fix new smartfox api"
+            },
+	    "3.1.0": {
                 "en": "fix multiple oilfox"
             },
             "3.0.0": {
@@ -162,7 +165,7 @@
 		"connectionType": "cloud",
 		"dataSource": "poll",
         "title": "Oilfox",
-        "version": "3.1.0",
+        "version": "4.0.0",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
         "schedule": "*/59 * * * *",
