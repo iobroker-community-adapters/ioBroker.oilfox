@@ -1,5 +1,6 @@
 {
     "common": {
+        "version": "4.0.1",
         "name": "oilfox",
         "news": {
             "3.1.0": {
@@ -198,7 +199,6 @@
         "connectionType": "cloud",
         "dataSource": "poll",
         "title": "Oilfox",
-        "version": "4.0.0",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
         "schedule": "*/59 * * * *",

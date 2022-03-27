@@ -18,7 +18,7 @@ This adapter allows to get data from the oilfox sensor via the Oilfox Website.
 * specify the your e-mail and password in the configuration page
 
 ## Changelog
-### 4.0.1 (2022-03-27)
+### __WORK IN PROGRESS__
 * IMPORTANT: All datastructures change with this update!
 * IMPORTANT: Password needs to be re-entered after update!
 * (inidona) update to new Oilfox API
