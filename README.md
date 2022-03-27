@@ -20,7 +20,8 @@ This adapter allows to get data from the oilfox sensor via the Oilfox Website.
 ## Changelog
 
 ### **WORK IN PROGRESS**
-* IMPORTANT: Password needs to be re-entered on update!
+* IMPORTANT: All datastructures change with this update!
+* IMPORTANT: Password needs to be re-entered after update!
 * (inidona) update to new Oilfox API
 * (Apollon77) General updates
 * (Apollon77) Add Sentry for crash reporting

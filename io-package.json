@@ -2,18 +2,6 @@
     "common": {
         "name": "oilfox",
         "news": {
-            "4.0.0": {
-                "en": "fix new smartfox api",
-                "de": "neue Smartfox-API reparieren",
-                "ru": "исправить новый API Smartfox",
-                "pt": "corrigir nova api smartfox",
-                "nl": "repareer nieuwe smartfox api",
-                "fr": "réparer la nouvelle api smartfox",
-                "it": "correggere la nuova API di smartfox",
-                "es": "reparar nueva api smartfox",
-                "pl": "napraw nowy interfejs smartfoxa",
-                "zh-cn": "修复新的 smartfox api"
-            },
             "3.1.0": {
                 "en": "fix multiple oilfox",
                 "de": "Reparieren Sie mehrere Ölfuchs",
@@ -256,28 +244,28 @@
                     ]
                 },
                 "title": {
-                    "en": "Re-enter the password after Update!",
-                    "de": "Passwort muss nach dem Update erneut eingegeben werden!",
-                    "ru": "Повторно введите пароль после обновления!",
-                    "pt": "Digite novamente a senha após Atualizar!",
-                    "nl": "Voer het wachtwoord opnieuw in na Update!",
-                    "fr": "Entrez à nouveau le mot de passe après la mise à jour !",
-                    "it": "Reinserire la password dopo l'aggiornamento!",
-                    "es": "Vuelva a ingresar la contraseña después de ¡Actualizar!",
-                    "pl": "Wprowadź hasło ponownie po aktualizacji!",
-                    "zh-cn": "更新后重新输入密码！"
+                    "en": "New version changes datastructure and needs configuration update!",
+                    "de": "Neue Version ändert Datenstruktur und benötigt Konfigurationsupdate!",
+                    "ru": "Новая версия меняет структуру данных и требует обновления конфигурации!",
+                    "pt": "Nova versão altera a estrutura de dados e precisa de atualização de configuração!",
+                    "nl": "Nieuwe versie verandert datastructuur en heeft configuratie-update nodig!",
+                    "fr": "La nouvelle version modifie la structure des données et nécessite une mise à jour de la configuration !",
+                    "it": "La nuova versione cambia la struttura dei dati e necessita di un aggiornamento della configurazione!",
+                    "es": "¡La nueva versión cambia la estructura de datos y necesita una actualización de configuración!",
+                    "pl": "Nowa wersja zmienia strukturę danych i wymaga aktualizacji konfiguracji!",
+                    "zh-cn": "新版本更改数据结构并需要更新配置！"
                 },
                 "text": {
-                    "en": "After installing this update the password/token used to access the Oilfox needs to be re-entered in the Instance-Settings!",
-                    "de": "Nach der Installation dieses Updates muss das für den Zugriff auf die Oilfox verwendete Passwort/Token in den Instanz-Einstellungen neu eingegeben werden!",
-                    "ru": "После установки этого обновления пароль/токен, используемый для доступа к Oilfox, необходимо повторно ввести в настройках экземпляра!",
-                    "pt": "Depois de instalar esta atualização, a senha/token usado para acessar o Oilfox precisa ser reinserido nas configurações da instância!",
-                    "nl": "Na het installeren van deze update moet het wachtwoord/token dat wordt gebruikt om toegang te krijgen tot de Oilfox opnieuw worden ingevoerd in de Instance-Settings!",
-                    "fr": "Après avoir installé cette mise à jour, le mot de passe/jeton utilisé pour accéder à la Oilfox doit être ressaisi dans les paramètres de l'instance !",
-                    "it": "Dopo aver installato questo aggiornamento, la password/token utilizzata per accedere al Oilfox deve essere reinserita nelle Impostazioni dell'istanza!",
-                    "es": "¡Después de instalar esta actualización, la contraseña/token utilizada para acceder a Oilfox debe volver a ingresarse en la configuración de la instancia!",
-                    "pl": "Po zainstalowaniu tej aktualizacji hasło/token używane do uzyskania dostępu do Oilfox należy ponownie wprowadzić w ustawieniach instancji!",
-                    "zh-cn": "安装此更新后，用于访问 Oilfox 的密码/令牌需要在实例设置中重新输入！"
+                    "en": "The new v4.x changes all datastructures. Please check new objects after update! Additionally the password used to access Oilfox needs to be re-entered in the Instance-Settings once!",
+                    "de": "Die neue v4.x ändert alle Datenstrukturen. Bitte die neue Objekte nach dem Update überprüfen! Zusätzlich muss das Passwort für den Zugriff auf Oilfox einmalig in den Instanz-Einstellungen neu eingegeben werden!",
+                    "ru": "Новая версия v4.x изменяет все структуры данных. Пожалуйста, проверяйте новые объекты после обновления! Кроме того, пароль, используемый для доступа к Oilfox, необходимо один раз повторно ввести в настройках экземпляра!",
+                    "pt": "A nova v4.x altera todas as estruturas de dados. Por favor, verifique novos objetos após a atualização! Além disso, a senha usada para acessar o Oilfox precisa ser reinserida nas configurações da instância uma vez!",
+                    "nl": "De nieuwe v4.x verandert alle datastructuren. Controleer nieuwe objecten na de update! Bovendien moet het wachtwoord dat wordt gebruikt om toegang te krijgen tot Oilfox eenmaal opnieuw worden ingevoerd in de Instance-instellingen!",
+                    "fr": "La nouvelle v4.x modifie toutes les structures de données. Veuillez vérifier les nouveaux objets après la mise à jour ! De plus, le mot de passe utilisé pour accéder à Oilfox doit être ressaisi une fois dans les paramètres de l'instance !",
+                    "it": "La nuova v4.x cambia tutte le strutture dati. Si prega di controllare i nuovi oggetti dopo l'aggiornamento! Inoltre, la password utilizzata per accedere a Oilfox deve essere reinserita nelle Impostazioni dell'istanza una volta!",
+                    "es": "La nueva v4.x cambia todas las estructuras de datos. ¡Compruebe los nuevos objetos después de la actualización! ¡Además, la contraseña utilizada para acceder a Oilfox debe volver a ingresarse en la Configuración de instancia una vez!",
+                    "pl": "Nowa wersja 4.x zmienia wszystkie struktury danych. Proszę sprawdzić nowe obiekty po aktualizacji! Dodatkowo hasło używane do uzyskania dostępu do Oilfox musi zostać raz ponownie wprowadzone w ustawieniach instancji!",
+                    "zh-cn": "新的 v4.x 更改了所有数据结构。更新后请检查新对象！此外，用于访问 Oilfox 的密码需要在实例设置中重新输入一次！"
                 },
                 "level": "warn",
                 "buttons": [
