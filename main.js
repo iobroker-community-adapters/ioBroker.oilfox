@@ -168,7 +168,7 @@ async function updateStatesFromResult(summaryObject) {
 			if (state) {
 				for (let pp in summaryObject.items[p]) {
 					if (typeof summaryObject.items[p][pp] !== 'object') {
-						adapter.setState('items.' + j + '.' + pp, summaryObject.items[p][pp], true);
+						adapter.setState('items.' + p + '.' + pp, summaryObject.items[p][pp], true);
 					}
 				}
 			}
