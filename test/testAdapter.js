@@ -100,8 +100,8 @@ describe('Test ' + adapterShortName + ' adapter', function() {
 
 
     it('Test ' + adapterShortName + ' adapter: Check nothing', function (done) {
-        this.timeout(1000);
-        done();
+        this.timeout(10000);
+        setTimeout(done, 9000);
     });
 
     after('Test ' + adapterShortName + ' adapter: Stop js-controller', function (done) {
@@ -109,7 +109,7 @@ describe('Test ' + adapterShortName + ' adapter', function() {
 
         setup.stopController(function (normalTerminated) {
             console.log('Adapter normal terminated: ' + normalTerminated);
-            done();
+            setTimeout(done, 3000);
         });
     });
 });

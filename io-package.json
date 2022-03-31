@@ -1,193 +1,206 @@
 {
-    "common": {
-        "name": "oilfox",
-        "news": {
-			"3.1.0": {
-                "en": "fix multiple oilfox"
-            },
-            "3.0.0": {
-                "en": "fix api after changes"
-            },
-            "2.3.0": {
-                "en": "fix for multiple oilfoxes"
-            },
-            "2.2.0": {
-                "en": "update dependencies"
-            },
-            "2.1.0": {
-                "en": "fix first run",
-                "de": "fix ersten Lauf",
-                "ru": "зафиксировать первый запуск",
-                "pt": "corrigir primeira execução",
-                "nl": "fix eerste run",
-                "fr": "fixer la première course",
-                "it": "risolvere prima esecuzione",
-                "es": "fijar la primera carrera",
-                "pl": "naprawić pierwszy bieg",
-                "zh-cn": "解决第一次运行"
-            },
-            "2.0.1": {
-                "en": "update to new api",
-                "de": "Update auf neue api",
-                "ru": "обновление нового API",
-                "pt": "atualização para a nova api",
-                "nl": "update naar nieuwe api",
-                "fr": "mise à jour à la nouvelle api",
-                "it": "aggiornamento alla nuova API",
-                "es": "la actualización a la nueva API",
-                "pl": "Aktualizacja do nowego API",
-                "zh-cn": "更新新的API"
-            },
-            "1.0.1": {
-                "en": "fix version",
-                "de": "fix version",
-                "ru": "затруднительная версия",
-                "pt": "fix version",
-                "nl": "fix versie",
-                "fr": "version fixe",
-                "it": "versione fissa",
-                "es": "fix version",
-                "pl": "fix version",
-                "zh-cn": "修复版本"
-            },
-            "1.0.0": {
-                "en": "support multiple oilfox",
-                "de": "unterstützen mehrere oilfox",
-                "ru": "поддерживает несколько oilfox",
-                "pt": "apoiar múltipla oilfox",
-                "nl": "ondersteuning voor meerdere oilfox",
-                "fr": "appuyer plusieurs oilfox",
-                "it": "sostenere oilfox multipla",
-                "es": "soportar múltiples Oilfox",
-                "pl": "obsługuje wielokrotnego oilfox",
-                "zh-cn": "支持多种oilfox"
-            },
-            "0.0.7": {
-                "en": "update node modules",
-                "de": "Knotenmodule aktualisieren",
-                "ru": "обновить узлы модулей",
-                "pt": "atualizar os módulos do nó",
-                "nl": "update knoopmodules",
-                "fr": "mise à jour des modules de noeud",
-                "it": "aggiornare i moduli del nodo",
-                "es": "actualizar los módulos de nodo",
-                "pl": "zaktualizuj moduły węzłów",
-                "zh-cn": "更新节点模块"
-            },
-            "0.0.6": {
-                "en": "add new translations",
-                "de": "Neue Übersetzungen hinzufügen",
-                "ru": "добавить новые переводы",
-                "pt": "adicionar novas traduções",
-                "nl": "voeg nieuwe vertalingen toe",
-                "fr": "ajouter de nouvelles traductions",
-                "it": "aggiungi nuove traduzioni",
-                "es": "añadir nuevas traducciones",
-                "pl": "dodaj nowe tłumaczenia",
-                "zh-cn": "添加新的翻译"
-            },
-            "0.0.5": {
-                "en": "bugfix release",
-                "de": "Bugfix-Release",
-                "ru": "выпуск исправлений",
-                "pt": "liberação de correções",
-                "nl": "bugfix-release",
-                "fr": "correction de bug",
-                "it": "versione bugfix",
-                "es": "lanzamiento de corrección de errores",
-                "pl": "wydanie poprawki",
-                "zh-cn": "bugfix发布"
-            },
-            "0.0.4": {
-                "en": "updated infos",
-                "de": "aktualisierte Infos",
-                "ru": "обновленная информация",
-                "pt": "informações atualizadas",
-                "nl": "bijgewerkte informatie",
-                "fr": "informations mises à jour",
-                "it": "informazioni aggiornate",
-                "es": "infos actualizados",
-                "pl": "zaktualizowane informacje",
-                "zh-cn": "更新的信息"
-            },
-            "0.0.3": {
-                "en": "supported compact mode and hided password",
-                "de": "unterstützter Kompaktmodus und verstecktes Passwort",
-                "ru": "поддерживается компактный режим и скрытый пароль",
-                "pt": "modo compacto suportado e senha oculta",
-                "nl": "ondersteunde compacte modus en verborgen wachtwoord",
-                "fr": "mode compact supporté et mot de passe masqué",
-                "it": "modalità compatta supportata e password nascosta",
-                "es": "Modo compacto soportado y contraseña oculta",
-                "pl": "obsługiwane tryb kompaktowy i ukryte hasło",
-                "zh-cn": "支持紧凑模式和隐藏密码"
-            },
-            "0.0.2": {
-                "en": "changed to scheduled adapter",
-                "de": "zu geplantem Adapter geändert",
-                "ru": "изменен на запланированный адаптер",
-                "pt": "mudou para o adaptador agendado",
-                "nl": "gewijzigd naar geplande adapter",
-                "fr": "changé en adaptateur planifié",
-                "it": "cambiato in adattatore programmato",
-                "es": "cambiado a adaptador programado",
-                "pl": "zmieniono na zaplanowany adapter",
-                "zh-cn": "更改为计划适配器"
-            }
-        },
-        "titleLang": {
-            "en": "Oilfox",
-            "de": "Oilfox",
-            "ru": "Oilfox",
-            "pt": "Oilfox",
-            "nl": "Oilfox",
-            "fr": "Oilfox",
-            "it": "Oilfox",
-            "es": "Oilfox",
-            "pl": "Oilfox",
-            "zh-cn": "Oilfox"
-        },
-        "desc": {
-            "en": "iobroker adapter for oilfox oil sensor",
-            "de": "Iobroker-Adapter für Oilfox-Ölsensor",
-            "ru": "адаптер iobroker для датчика масла oilfox",
-            "pt": "Adaptador iobroker para sensor de óleo oilfox",
-            "nl": "iobroker-adapter voor oliefox-oliesensor",
-            "fr": "adaptateur iobroker pour capteur d'huile oilfox",
-            "it": "adattatore iobroker per sensore olio oilfox",
-            "es": "Adaptador iobroker para sensor de aceite oilfox",
-            "pl": "Adapter iobroker do czujnika oleju ropnego",
-            "zh-cn": "用于oilfox油传感器的iobroker适配器"
-        },
-		"connectionType": "cloud",
-		"dataSource": "poll",
-        "title": "Oilfox",
-        "version": "3.1.0",
-        "platform": "Javascript/Node.js",
-        "mode": "schedule",
-        "schedule": "*/59 * * * *",
-        "icon": "oilfox.png",
-        "materialize": true,
-        "enabled": true,
-        "messagebox": false,
-        "loglevel": "info",
-        "keywords": [
-            "oilfox"
-        ],
-        "nondeletable": false,
-        "type": "hardware",
-        "authors": [
-            "jochen kuehner <jochen.kuehner@gmx.de>"
-        ],
-        "license": "MIT",
-        "readme": "https://github.com/iobroker-community-adapters/ioBroker.oilfox/blob/master/README.md",
-        "extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/admin/oilfox.png",
-        "compact": true
+  "common": {
+    "version": "4.0.2",
+    "name": "oilfox",
+    "news": {
+      "4.0.2": {
+        "en": "IMPORTANT: All datastructures change with this update!\nIMPORTANT: Password needs to be re-entered after update!\nupdate to new Oilfox API\nGeneral updates\nAdd Sentry for crash reporting",
+        "de": "WICHTIG: Alle Datenstrukturen ändern sich mit diesem Update!\nWICHTIG: Passwort muss nach Update neu eingegeben werden!\nUpdate auf neue Oilfox API\nAllgemeine Aktualisierungen\nFügen Sie Sentry für Absturzberichte hinzu",
+        "ru": "ВАЖНО: с этим обновлением меняются все структуры данных!\nВАЖНО: После обновления пароль необходимо ввести повторно!\nобновление до нового API Oilfox\nОбщие обновления\nДобавьте Sentry для отчетов о сбоях",
+        "pt": "IMPORTANTE: Todas as estruturas de dados mudam com esta atualização!\nIMPORTANTE: A senha precisa ser reinserida após a atualização!\natualização para a nova API do Oilfox\nAtualizações gerais\nAdicionar Sentinela para relatórios de falhas",
+        "nl": "BELANGRIJK: Alle datastructuren veranderen met deze update!\nBELANGRIJK: Wachtwoord moet opnieuw worden ingevoerd na update!\nupdate naar nieuwe Oilfox API\nAlgemene updates\nSentry toevoegen voor crashrapportage",
+        "fr": "IMPORTANT : Toutes les structures de données changent avec cette mise à jour !\nIMPORTANT : Le mot de passe doit être ressaisi après la mise à jour !\nmise à jour vers la nouvelle API Oilfox\nMises à jour générales\nAjouter Sentry pour les rapports de plantage",
+        "it": "IMPORTANTE: tutte le strutture dati cambiano con questo aggiornamento!\nIMPORTANTE: la password deve essere reinserita dopo l'aggiornamento!\naggiornamento alla nuova API Oilfox\nAggiornamenti generali\nAggiungi Sentinella per la segnalazione degli arresti anomali",
+        "es": "IMPORTANTE: ¡Todas las estructuras de datos cambian con esta actualización!\nIMPORTANTE: ¡Se debe volver a ingresar la contraseña después de la actualización!\nactualizar a la nueva API de Oilfox\nActualizaciones generales\nAgregar Sentry para informes de fallas",
+        "pl": "WAŻNE: Wraz z tą aktualizacją zmienią się wszystkie struktury danych!\nWAŻNE: po aktualizacji hasło należy wprowadzić ponownie!\naktualizacja do nowego API Oilfox\nOgólne aktualizacje\nDodaj Sentry do zgłaszania awarii",
+        "zh-cn": "重要提示：所有数据结构都随着这次更新而改变！\n重要提示：更新后需要重新输入密码！\n更新到新的 Oilfox API\n一般更新\n添加 Sentry 以进行崩溃报告"
+      },
+      "3.1.0": {
+        "en": "fix multiple oilfox",
+        "de": "Reparieren Sie mehrere Ölfuchs",
+        "ru": "исправить несколько oilfox",
+        "pt": "corrigir vários oilfox",
+        "nl": "repareer meerdere oilfox",
+        "fr": "réparer plusieurs oilfox",
+        "it": "correggere più oilfox",
+        "es": "arreglar múltiples oilfox",
+        "pl": "napraw wielu lisów oleistych",
+        "zh-cn": "修复多个油狐"
+      },
+      "3.0.0": {
+        "en": "fix api after changes",
+        "de": "API nach Änderungen reparieren",
+        "ru": "исправить API после изменений",
+        "pt": "corrigir api após as alterações",
+        "nl": "api repareren na wijzigingen",
+        "fr": "réparer l'api après les modifications",
+        "it": "correggere l'API dopo le modifiche",
+        "es": "corregir api después de los cambios",
+        "pl": "napraw API po zmianach",
+        "zh-cn": "修改后修复api"
+      },
+      "2.3.0": {
+        "en": "fix for multiple oilfoxes",
+        "de": "Fix für mehrere Ölfüchse",
+        "ru": "исправление для нескольких oilfox",
+        "pt": "correção para vários oilfoxes",
+        "nl": "oplossing voor meerdere olievossen",
+        "fr": "correctif pour plusieurs oilfoxs",
+        "it": "correzione per più oilfox",
+        "es": "arreglo para múltiples zorros petroleros",
+        "pl": "poprawka dla wielu lisów oleistych",
+        "zh-cn": "修复多个油狐"
+      },
+      "2.2.0": {
+        "en": "update dependencies",
+        "de": "Abhängigkeiten aktualisieren",
+        "ru": "обновить зависимости",
+        "pt": "atualizar dependências",
+        "nl": "update afhankelijkheden",
+        "fr": "mettre à jour les dépendances",
+        "it": "aggiornare le dipendenze",
+        "es": "actualizar dependencias",
+        "pl": "zaktualizuj zależności",
+        "zh-cn": "更新依赖"
+      },
+      "2.1.0": {
+        "en": "fix first run",
+        "de": "fix ersten Lauf",
+        "ru": "зафиксировать первый запуск",
+        "pt": "corrigir primeira execução",
+        "nl": "fix eerste run",
+        "fr": "fixer la première course",
+        "it": "risolvere prima esecuzione",
+        "es": "fijar la primera carrera",
+        "pl": "naprawić pierwszy bieg",
+        "zh-cn": "解决第一次运行"
+      },
+      "2.0.1": {
+        "en": "update to new api",
+        "de": "Update auf neue api",
+        "ru": "обновление нового API",
+        "pt": "atualização para a nova api",
+        "nl": "update naar nieuwe api",
+        "fr": "mise à jour à la nouvelle api",
+        "it": "aggiornamento alla nuova API",
+        "es": "la actualización a la nueva API",
+        "pl": "Aktualizacja do nowego API",
+        "zh-cn": "更新新的API"
+      }
     },
-    "native": {
-        "email": "",
-        "password": ""
+    "titleLang": {
+      "en": "Oilfox",
+      "de": "Oilfox",
+      "ru": "Oilfox",
+      "pt": "Oilfox",
+      "nl": "Oilfox",
+      "fr": "Oilfox",
+      "it": "Oilfox",
+      "es": "Oilfox",
+      "pl": "Oilfox",
+      "zh-cn": "Oilfox"
     },
-    "objects": [],
-    "instanceObjects": []
+    "desc": {
+      "en": "iobroker adapter for oilfox oil sensor",
+      "de": "Iobroker-Adapter für Oilfox-Ölsensor",
+      "ru": "адаптер iobroker для датчика масла oilfox",
+      "pt": "Adaptador iobroker para sensor de óleo oilfox",
+      "nl": "iobroker-adapter voor oliefox-oliesensor",
+      "fr": "adaptateur iobroker pour capteur d'huile oilfox",
+      "it": "adattatore iobroker per sensore olio oilfox",
+      "es": "Adaptador iobroker para sensor de aceite oilfox",
+      "pl": "Adapter iobroker do czujnika oleju ropnego",
+      "zh-cn": "用于oilfox油传感器的iobroker适配器"
+    },
+    "connectionType": "cloud",
+    "dataSource": "poll",
+    "title": "Oilfox",
+    "platform": "Javascript/Node.js",
+    "mode": "schedule",
+    "schedule": "*/59 * * * *",
+    "icon": "oilfox.png",
+    "materialize": true,
+    "enabled": true,
+    "messagebox": false,
+    "loglevel": "info",
+    "keywords": [
+      "oilfox"
+    ],
+    "nondeletable": false,
+    "type": "hardware",
+    "authors": [
+      "jochen kuehner <jochen.kuehner@gmx.de>"
+    ],
+    "license": "MIT",
+    "readme": "https://github.com/iobroker-community-adapters/ioBroker.oilfox/blob/master/README.md",
+    "extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/admin/oilfox.png",
+    "compact": true,
+    "plugins": {
+      "sentry": {
+        "dsn": "https://5531e38d5d024001a643a8bd7d19d9e9@sentry.iobroker.net/188"
+      }
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=3.0.0"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=5.1.28"
+      }
+    ],
+    "messages": [
+      {
+        "condition": {
+          "operand": "and",
+          "rules": [
+            "oldVersion<4.0.0",
+            "newVersion>=4.0.0"
+          ]
+        },
+        "title": {
+          "en": "New version changes datastructure and needs configuration update!",
+          "de": "Neue Version ändert Datenstruktur und benötigt Konfigurationsupdate!",
+          "ru": "Новая версия меняет структуру данных и требует обновления конфигурации!",
+          "pt": "Nova versão altera a estrutura de dados e precisa de atualização de configuração!",
+          "nl": "Nieuwe versie verandert datastructuur en heeft configuratie-update nodig!",
+          "fr": "La nouvelle version modifie la structure des données et nécessite une mise à jour de la configuration !",
+          "it": "La nuova versione cambia la struttura dei dati e necessita di un aggiornamento della configurazione!",
+          "es": "¡La nueva versión cambia la estructura de datos y necesita una actualización de configuración!",
+          "pl": "Nowa wersja zmienia strukturę danych i wymaga aktualizacji konfiguracji!",
+          "zh-cn": "新版本更改数据结构并需要更新配置！"
+        },
+        "text": {
+          "en": "The new v4.x changes all datastructures. Please check new objects after update! Additionally the password used to access Oilfox needs to be re-entered in the Instance-Settings once!",
+          "de": "Die neue v4.x ändert alle Datenstrukturen. Bitte die neue Objekte nach dem Update überprüfen! Zusätzlich muss das Passwort für den Zugriff auf Oilfox einmalig in den Instanz-Einstellungen neu eingegeben werden!",
+          "ru": "Новая версия v4.x изменяет все структуры данных. Пожалуйста, проверяйте новые объекты после обновления! Кроме того, пароль, используемый для доступа к Oilfox, необходимо один раз повторно ввести в настройках экземпляра!",
+          "pt": "A nova v4.x altera todas as estruturas de dados. Por favor, verifique novos objetos após a atualização! Além disso, a senha usada para acessar o Oilfox precisa ser reinserida nas configurações da instância uma vez!",
+          "nl": "De nieuwe v4.x verandert alle datastructuren. Controleer nieuwe objecten na de update! Bovendien moet het wachtwoord dat wordt gebruikt om toegang te krijgen tot Oilfox eenmaal opnieuw worden ingevoerd in de Instance-instellingen!",
+          "fr": "La nouvelle v4.x modifie toutes les structures de données. Veuillez vérifier les nouveaux objets après la mise à jour ! De plus, le mot de passe utilisé pour accéder à Oilfox doit être ressaisi une fois dans les paramètres de l'instance !",
+          "it": "La nuova v4.x cambia tutte le strutture dati. Si prega di controllare i nuovi oggetti dopo l'aggiornamento! Inoltre, la password utilizzata per accedere a Oilfox deve essere reinserita nelle Impostazioni dell'istanza una volta!",
+          "es": "La nueva v4.x cambia todas las estructuras de datos. ¡Compruebe los nuevos objetos después de la actualización! ¡Además, la contraseña utilizada para acceder a Oilfox debe volver a ingresarse en la Configuración de instancia una vez!",
+          "pl": "Nowa wersja 4.x zmienia wszystkie struktury danych. Proszę sprawdzić nowe obiekty po aktualizacji! Dodatkowo hasło używane do uzyskania dostępu do Oilfox musi zostać raz ponownie wprowadzone w ustawieniach instancji!",
+          "zh-cn": "新的 v4.x 更改了所有数据结构。更新后请检查新对象！此外，用于访问 Oilfox 的密码需要在实例设置中重新输入一次！"
+        },
+        "level": "warn",
+        "buttons": [
+          "agree",
+          "cancel"
+        ]
+      }
+    ]
+  },
+  "protectedNative": [
+    "password"
+  ],
+  "encryptedNative": [
+    "password"
+  ],
+  "native": {
+    "email": "",
+    "password": ""
+  },
+  "objects": [],
+  "instanceObjects": []
 }
