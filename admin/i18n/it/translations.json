@@ -1,5 +1,7 @@
 {
-    "E-Mail": "E-mail",
-    "Main settings": "Impostazioni principali",
-    "Password": "Parola d'ordine"
+  "E-Mail": "E-mail",
+  "Main settings": "Impostazioni principali",
+  "Password": "Parola d'ordine",
+  "E-Mail of your Oilfox Account": "E-Mail del tuo Account Oilfox",
+  "Password of your Oilfox Account": "Password del tuo account Oilfox"
 }

@@ -1,5 +1,7 @@
 {
-    "E-Mail": "Эл. почта",
-    "Main settings": "Основные параметры",
-    "Password": "пароль"
+  "E-Mail": "Эл. почта",
+  "Main settings": "Основные параметры",
+  "Password": "пароль",
+  "E-Mail of your Oilfox Account": "Электронная почта вашей учетной записи Oilfox",
+  "Password of your Oilfox Account": "Пароль вашей учетной записи Oilfox"
 }

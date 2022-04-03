@@ -1,5 +1,7 @@
 {
-    "E-Mail": "电子邮件",
-    "Main settings": "主要设定",
-    "Password": "密码"
+  "E-Mail": "电子邮件",
+  "Main settings": "主要设定",
+  "Password": "密码",
+  "E-Mail of your Oilfox Account": "您的 Oilfox 帐户的电子邮件",
+  "Password of your Oilfox Account": "您的 Oilfox 帐户的密码"
 }

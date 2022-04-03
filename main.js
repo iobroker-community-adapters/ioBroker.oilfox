@@ -2,10 +2,9 @@
  * Oilfox adapter
  */
 
-"use strict";
+'use strict';
 
 const utils = require('@iobroker/adapter-core');
-const querystring = require('querystring');
 const https = require('https');
 const adapterName = require('./package.json').name.split('.').pop();
 
@@ -14,7 +13,7 @@ function startAdapter(options) {
 	options = options || {};
 	Object.assign(options, {
 		name: adapterName,
-		ready: function () {
+		ready: () => {
 			try {
 				adapter.log.debug("adapter.on-ready: << READY >>");
 
@@ -30,15 +29,16 @@ function startAdapter(options) {
 			}
 		}
 	});
+
 	adapter = new utils.Adapter(options);
 
 	return adapter;
-};
+}
 
 function connectOilfox() {
-	let post_data = JSON.stringify({
-		'email': adapter.config.email,
-		'password': adapter.config.password
+	let postData = JSON.stringify({
+		email: adapter.config.email,
+		password: adapter.config.password
 	});
 
 	let request_options = {
@@ -50,61 +50,72 @@ function connectOilfox() {
 			'Content-Type': 'application/json',
 			'Connection': 'Keep-Alive',
 			//'User-Agent': 'okhttp/3.2.0',
-			'Content-Length': post_data.length,
+			'Content-Length': postData.length,
 			'Accept': '*/*',
 			'User-Agent': 'ioBroker.oilfox'
 		}
 	};
 
-	let tokenRequest = https.request(request_options, (tokenRequestResult) => {
+	let tokenRequest = https.request(request_options, tokenRequestResult => {
 		tokenRequestResult.setEncoding('utf8');
-		let tokenData = "";
-		tokenRequestResult.on('data', (chunk) => { adapter.log.debug("recieved chunk: " + chunk); tokenData += chunk; });
+		let tokenData = '';
+
+		tokenRequestResult.on('data', chunk => {
+			adapter.log.debug(`received chunk: ${chunk}`);
+			tokenData += chunk;
+		});
+
 		tokenRequestResult.on('end', () => {
-			adapter.log.debug("recieved data: " + tokenData);
+			adapter.log.debug(`received data: ${tokenData}`);
 			let tokenObject = JSON.parse(tokenData);
-			request_options.headers['Authorization'] = 'Bearer ' + tokenObject.access_token;
+			request_options.headers['Authorization'] = `Bearer ${tokenObject.access_token}`;
 			request_options.path = '/customer-api/v1/device';
 			request_options.method = 'GET';
 			let summaryRequest = https.request(request_options, (summaryRequestResult) => {
 				summaryRequestResult.setEncoding('utf8');
-				let summaryData = "";
-				summaryRequestResult.on('data', (chunk) => { adapter.log.debug("recieved chunk2: " + chunk); summaryData += chunk; });
-				summaryRequestResult.on('end', () => {
-					adapter.log.debug("recieved data 2: " + summaryData);
-					let summaryObject = JSON.parse(summaryData);
-					let promises = createStateObjectsFromResult(summaryObject);
+				let summaryData = '';
 
-					adapter.log.debug("create state objects from summary");
-					Promise.all(promises).then(async () => {
-						adapter.log.debug("update states from summary");
+				summaryRequestResult.on('data', chunk => {
+					adapter.log.debug(`received chunk2: ${chunk}`);
+					summaryData += chunk;
+				});
+
+				summaryRequestResult.on('end', async () => {
+					adapter.log.debug(`received data 2: ${summaryData}`);
+					let summaryObject = JSON.parse(summaryData);
+					try {
+						await createStateObjectsFromResult(summaryObject);
+
+						adapter.log.debug('create state objects from summary');
+
+						adapter.log.debug('update states from summary');
 						await updateStatesFromResult(summaryObject);
-					}).catch((err) => {
-						adapter.log.error("error: " + err);
-					});
+					} catch (err) {
+						adapter.log.error(`error: ${err}`);
+					}
 
 					adapter.stop();
 				});
 			});
+
 			summaryRequest.end();
 		});
 	});
 
-	adapter.log.debug("send data: " + post_data);
-	tokenRequest.write(post_data);
+	adapter.log.debug(`send data: ${postData}`);
+	tokenRequest.write(postData);
 	tokenRequest.end();
 }
 
 function main() {
-	adapter.log.debug("adapter.main: << MAIN >>");
+	adapter.log.debug('adapter.main: << MAIN >>');
 	connectOilfox();
 }
 
-function createStateObjectsFromResult(summaryObject) {
-	const promises = [];
+async function createStateObjectsFromResult(summaryObject) {
 	for (let p in summaryObject) {
 		if (typeof summaryObject[p] !== 'object') {
-			promises.push(adapter.setObjectNotExistsAsync('info.' + p, {
+			await adapter.setObjectNotExistsAsync('info.' + p, {
 				type: 'state',
 				common: {
 					'name': p,
@@ -114,14 +125,15 @@ function createStateObjectsFromResult(summaryObject) {
 					'read': true
 				},
 				native: {}
-			}));
+			});
 		}
 	}
+
 	let i = 0;
 	for (let p in summaryObject.items) {
 		for (let pp in summaryObject.items[p]) {
 			if (typeof summaryObject.items[p][pp] !== 'object') {
-				promises.push(adapter.setObjectNotExistsAsync('items.' + i + '.' + pp, {
+				await adapter.setObjectNotExistsAsync(`items.${i}.${pp}`, {
 					type: 'state',
 					common: {
 						'name': 'device.' + pp,
@@ -131,23 +143,21 @@ function createStateObjectsFromResult(summaryObject) {
 						'read': true
 					},
 					native: {}
-				}));
+				});
 			}
 		}
 
 		i++;
 	}
-	return promises;
 }
 
 async function updateStatesFromResult(summaryObject) {
 	try {
 		for (let p in summaryObject) {
 			if (typeof summaryObject[p] !== 'object') {
-				adapter.setState('info.' + p, summaryObject[p], true);
+				await adapter.setStateAsync('info.' + p, summaryObject[p], true);
 			}
 		}
-
 
 		for (let p in summaryObject.items) {
 			let state = null;
@@ -165,16 +175,16 @@ async function updateStatesFromResult(summaryObject) {
 				state = null;
 				j++;
 			}
+
 			if (state) {
 				for (let pp in summaryObject.items[p]) {
 					if (typeof summaryObject.items[p][pp] !== 'object') {
-						adapter.setState('items.' + p + '.' + pp, summaryObject.items[p][pp], true);
+						await adapter.setStateAsync(`items.${p}.${pp}`, summaryObject.items[p][pp], true);
 					}
 				}
 			}
 		}
-	}
-	catch (err) {
+	} catch (err) {
 		adapter.log.error(err);
 	}
 }

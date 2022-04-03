@@ -1,0 +1,19 @@
+{
+  "type": "tabs",
+  "i18n": true,
+  "items": {
+    "email": {
+      "type": "text",
+      "label": "E-Mail",
+      "help": "E-Mail of your Oilfox Account",
+      "sm": 12
+    },
+    "password": {
+      "type": "password",
+      "repeat": true,
+      "label": "Password",
+      "help": "Password of your Oilfox Account",
+      "sm": 12
+    }
+  }
+}

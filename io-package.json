@@ -150,6 +150,9 @@
         "admin": ">=5.1.28"
       }
     ],
+    "adminUI": {
+      "config": "json"
+    },
     "messages": [
       {
         "condition": {
