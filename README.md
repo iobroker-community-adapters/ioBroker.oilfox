@@ -22,7 +22,7 @@ This adapter allows getting data from the Oilfox sensor via the Oilfox Website.
 -->
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 4.1.0 (2022-04-03)
 * (jogibear9988) Usage of new oilfox api
 * (bluefox) Added usage JSON configuration
 

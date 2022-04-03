@@ -1,8 +1,20 @@
 {
   "common": {
-    "version": "4.0.2",
+    "version": "4.1.0",
     "name": "oilfox",
     "news": {
+      "4.1.0": {
+        "en": "Usage of new oilfox api\nAdded usage JSON configuration",
+        "de": "Verwendung der neuen Oilfox-API\nVerwendung JSON-Konfiguration hinzugefügt",
+        "ru": "Использование нового API oilfox\nДобавлена конфигурация использования JSON",
+        "pt": "Uso da nova API do oilfox\nConfiguração JSON de uso adicionada",
+        "nl": "Gebruik van nieuwe oilfox api\nJSON-configuratie voor gebruik toegevoegd",
+        "fr": "Utilisation de la nouvelle API Oilfox\nAjout de la configuration JSON d'utilisation",
+        "it": "Utilizzo della nuova API di oilfox\nAggiunta configurazione JSON di utilizzo",
+        "es": "Uso de la nueva api oilfox\nConfiguración JSON de uso agregado",
+        "pl": "Wykorzystanie nowego api lisa oleistego\nDodano użycie konfiguracji JSON",
+        "zh-cn": "使用新的oilfox api\n添加了使用 JSON 配置"
+      },
       "4.0.2": {
         "en": "IMPORTANT: All datastructures change with this update!\nIMPORTANT: Password needs to be re-entered after update!\nupdate to new Oilfox API\nGeneral updates\nAdd Sentry for crash reporting",
         "de": "WICHTIG: Alle Datenstrukturen ändern sich mit diesem Update!\nWICHTIG: Passwort muss nach Update neu eingegeben werden!\nUpdate auf neue Oilfox API\nAllgemeine Aktualisierungen\nFügen Sie Sentry für Absturzberichte hinzu",
@@ -74,18 +86,6 @@
         "es": "fijar la primera carrera",
         "pl": "naprawić pierwszy bieg",
         "zh-cn": "解决第一次运行"
-      },
-      "2.0.1": {
-        "en": "update to new api",
-        "de": "Update auf neue api",
-        "ru": "обновление нового API",
-        "pt": "atualização para a nova api",
-        "nl": "update naar nieuwe api",
-        "fr": "mise à jour à la nouvelle api",
-        "it": "aggiornamento alla nuova API",
-        "es": "la actualización a la nueva API",
-        "pl": "Aktualizacja do nowego API",
-        "zh-cn": "更新新的API"
       }
     },
     "titleLang": {
