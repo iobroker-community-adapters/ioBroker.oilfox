@@ -1,8 +1,20 @@
 {
   "common": {
-    "version": "4.1.0",
+    "version": "4.1.1",
     "name": "oilfox",
     "news": {
+      "4.1.1": {
+        "en": "Usage of new oilfox api\nAdded usage JSON configuration",
+        "de": "Verwendung der neuen Oilfox-API\nVerwendung JSON-Konfiguration hinzugefügt",
+        "ru": "Использование нового API oilfox\nДобавлена конфигурация использования JSON",
+        "pt": "Uso da nova API do oilfox\nConfiguração JSON de uso adicionada",
+        "nl": "Gebruik van nieuwe oilfox api\nJSON-configuratie voor gebruik toegevoegd",
+        "fr": "Utilisation de la nouvelle API Oilfox\nAjout de la configuration JSON d'utilisation",
+        "it": "Utilizzo della nuova API di oilfox\nAggiunta configurazione JSON di utilizzo",
+        "es": "Uso de la nueva api oilfox\nConfiguración JSON de uso agregado",
+        "pl": "Wykorzystanie nowego api lisa oleistego\nDodano użycie konfiguracji JSON",
+        "zh-cn": "使用新的oilfox api\n添加了使用 JSON 配置"
+      },
       "4.1.0": {
         "en": "Usage of new oilfox api\nAdded usage JSON configuration",
         "de": "Verwendung der neuen Oilfox-API\nVerwendung JSON-Konfiguration hinzugefügt",
@@ -74,18 +86,6 @@
         "es": "actualizar dependencias",
         "pl": "zaktualizuj zależności",
         "zh-cn": "更新依赖"
-      },
-      "2.1.0": {
-        "en": "fix first run",
-        "de": "fix ersten Lauf",
-        "ru": "зафиксировать первый запуск",
-        "pt": "corrigir primeira execução",
-        "nl": "fix eerste run",
-        "fr": "fixer la première course",
-        "it": "risolvere prima esecuzione",
-        "es": "fijar la primera carrera",
-        "pl": "naprawić pierwszy bieg",
-        "zh-cn": "解决第一次运行"
       }
     },
     "titleLang": {
