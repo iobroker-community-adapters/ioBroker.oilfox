@@ -1,8 +1,20 @@
 {
   "common": {
-    "version": "4.1.1",
+    "version": "4.1.2",
     "name": "oilfox",
     "news": {
+      "4.1.2": {
+        "en": "Corrected configuration GUI",
+        "de": "Korrigierte Konfigurations-GUI",
+        "ru": "Исправлен графический интерфейс конфигурации",
+        "pt": "GUI de configuração corrigida",
+        "nl": "Gecorrigeerde configuratie GUI",
+        "fr": "Interface graphique de configuration corrigée",
+        "it": "GUI di configurazione corretta",
+        "es": "GUI de configuración corregida",
+        "pl": "Poprawiony GUI konfiguracji",
+        "zh-cn": "更正了配置 GUI"
+      },
       "4.0.2": {
         "en": "IMPORTANT: All datastructures change with this update!\nIMPORTANT: Password needs to be re-entered after update!\nupdate to new Oilfox API\nGeneral updates\nAdd Sentry for crash reporting",
         "de": "WICHTIG: Alle Datenstrukturen ändern sich mit diesem Update!\nWICHTIG: Passwort muss nach Update neu eingegeben werden!\nUpdate auf neue Oilfox API\nAllgemeine Aktualisierungen\nFügen Sie Sentry für Absturzberichte hinzu",
