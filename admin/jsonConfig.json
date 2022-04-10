@@ -1,19 +1,24 @@
 {
-  "type": "tabs",
+  "type": "panel",
   "i18n": true,
   "items": {
     "email": {
       "type": "text",
       "label": "E-Mail",
       "help": "E-Mail of your Oilfox Account",
-      "sm": 12
+      "sm": 12,
+      "md": 6,
+      "lg": 4
     },
     "password": {
+      "newLine": true,
       "type": "password",
       "repeat": true,
       "label": "Password",
       "help": "Password of your Oilfox Account",
-      "sm": 12
+      "sm": 12,
+      "md": 6,
+      "lg": 4
     }
   }
 }
