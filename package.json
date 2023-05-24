@@ -33,7 +33,7 @@
     "axios": "^0.27.2",
     "chai": "^4.3.7",
     "gulp": "^4.0.2",
-    "mocha": "^9.2.2"
+    "mocha": "^10.2.0"
   },
   "bugs": {
     "url": "https://github.com/iobroker-community-adapters/ioBroker.oilfox/issues"
