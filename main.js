@@ -46,6 +46,7 @@ function connectOilfox() {
 		port: '443',
 		path: '/customer-api/v1/login',
 		method: 'POST',
+    	timeout: 5000,
 		headers: {
 			'Content-Type': 'application/json',
 			'Connection': 'Keep-Alive',
