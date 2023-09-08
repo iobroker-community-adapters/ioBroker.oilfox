@@ -81,6 +81,7 @@ This adapter allows getting data from the Oilfox sensor via the Oilfox Website.
 ## License
 The MIT License (MIT)
 
+Copyright (c) 2023 ioBroker Community Developers 
 Copyright (c) 2018-2022 jogibear9988 <jochen.kuehner@gmx.de>, ioBroker Community Developers
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
