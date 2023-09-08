@@ -1,8 +1,21 @@
 {
   "common": {
-    "version": "4.1.2",
+    "version": "4.2.0",
     "name": "oilfox",
     "news": {
+      "4.2.0": {
+        "en": "Adapter requires node 16 or newer now\nA timeout of 5s has been added to http requests to avoid hanging processes (#110)\nDependencies have been updated",
+        "de": "Adapter benötigt Node 16 oder neuer\nEin Timeout von 5s wurde zu http-Anfragen hinzugefügt, um hängende Prozesse zu vermeiden (#110)\nAbhängigkeiten wurden aktualisiert",
+        "ru": "Адаптер требует узел 16 или новее сейчас\nПрибытие 5s было добавлено в HTTP-запросы, чтобы избежать висящих процессов #(110)\nВ зависимости были обновлены",
+        "pt": "Adaptador requer nó 16 ou mais recente agora\nUm timeout de 5s foi adicionado a http solicitações para evitar processos pendurados #(110)\nAs dependências foram atualizadas",
+        "nl": "Adapter vereist node 16 of Newer nu\nEen time-out van 5's is toegevoegd aan HTP verzoeken om het vermijden van ophangingsprocessen te vermijden\nAfhankelijkheid",
+        "fr": "Adaptateur nécessite 16 ou plus maintenant\nUn timeout de 5s a été ajouté aux requêtes http pour éviter les processus de suspension #(110)\nLes dépendances ont été mises à jour",
+        "it": "Adattatore richiede nodo 16 o più nuovo ora\nUn timeout di 5s è stato aggiunto alle richieste http per evitare i processi pendenti #(110)\nLe dipendenze sono state aggiornate",
+        "es": "Adaptador requiere nodo 16 o más nuevo ahora\nSe ha añadido un cronograma de 5s a las solicitudes http para evitar procesos colgantes #(110)\nSe han actualizado las dependencias",
+        "pl": "Adapter wymaga węzła 16 lub nowszego\nDo http dodaje się czas uniknięcia powieszenia procesów #(110)\nZależności zostały zaktualizowane",
+        "uk": "Адаптер вимагає вузла 16 або нового\nЧас від 5 років додано до HTTP запитів, щоб уникнути висихання процесів #(110)\nОновлено залежність",
+        "zh-cn": "现在不需要16个或新的人员。\n添加了5秒时间,以http://s.refing process #(110)\n已更新了属地"
+      },
       "4.1.2": {
         "en": "Corrected configuration GUI",
         "de": "Korrigierte Konfigurations-GUI",
