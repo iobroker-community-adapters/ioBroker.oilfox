@@ -9,16 +9,24 @@ const https = require('https');
 const adapterName = require('./package.json').name.split('.').pop();
 
 let adapter;
+let watchdog;
+
+function onTimeout() {
+	adapter.log.warn('Timeout occured, adapter terminated by watchdog');
+	adapter.stop();
+};
+
 function startAdapter(options) {
 	options = options || {};
 	Object.assign(options, {
 		name: adapterName,
-		ready: () => {
+		ready: async () => {
 			try {
 				adapter.log.debug("adapter.on-ready: << READY >>");
 
 				if (adapter.config.email && adapter.config.password) {
-					main();
+					watchdog = adapter.setTimeout (onTimeout, 45*1000 );
+					await main();
 				} else {
 					adapter.log.warn('No E-Mail or Password set');
 					adapter.stop();
@@ -27,6 +35,14 @@ function startAdapter(options) {
 				adapter.log.error(err);
 				adapter.stop();
 			}
+		},
+
+		unload: (callback) => {
+
+			if (watchdog) adapter.clearTimeout(watchdog);
+
+			// callback must be called under all circumstances
+			callback && callback();
 		}
 	});
 
@@ -43,6 +59,7 @@ function connectOilfox() {
 
 	let request_options = {
 		host: 'api.oilfox.io',
+//		host: '10.1.1.1', // test timeout
 		port: '443',
 		path: '/customer-api/v1/login',
 		method: 'POST',
@@ -83,8 +100,9 @@ function connectOilfox() {
 
 				summaryRequestResult.on('end', async () => {
 					adapter.log.debug(`received data 2: ${summaryData}`);
-					let summaryObject = JSON.parse(summaryData);
 					try {
+						let summaryObject = JSON.parse(summaryData);
+
 						await createStateObjectsFromResult(summaryObject);
 
 						adapter.log.debug('create state objects from summary');
@@ -92,13 +110,13 @@ function connectOilfox() {
 						adapter.log.debug('update states from summary');
 						await updateStatesFromResult(summaryObject);
 					} catch (err) {
-						adapter.log.error(`error: ${err}`);
+						adapter.log.error(`error processing summary data: ${summaryData}`);
+						adapter.log.error(`${err}`);
 					}
 
 					adapter.stop();
 				});
 			});
-
 			summaryRequest.end();
 		});
 	});
@@ -108,8 +126,22 @@ function connectOilfox() {
 	tokenRequest.end();
 }
 
-function main() {
+async function main() {
 	adapter.log.debug('adapter.main: << MAIN >>');
+
+	const obj = await adapter.getForeignObjectAsync(`system.adapter.${adapter.namespace}`);
+	adapter.log.info(`adapter scheduling set to ${obj.common.schedule}`);
+	const schedule = obj.common.schedule || '* * * * *';
+	if ((schedule === '* * * * *') || ( schedule === '0/59 * * * *')) {
+		adapter.log.warn('default schedule detected, setting random value');
+		const minute = Math.trunc(Math.random() * (59-1) + 1); // 1 - 59, omit 0
+		const newSchedule = `${minute} * * * *`;
+		adapter.log.warn(`schedule will be set to ${newSchedule}`);
+		obj.common.schedule = newSchedule;
+		await adapter.setForeignObjectAsync(`system.adapter.${adapter.namespace}`, obj);
+		await adapter.stop();
+	};
+
 	connectOilfox();
 }
 
