@@ -22,7 +22,7 @@ This adapter allows getting data from the Oilfox sensor via the Oilfox Website.
 -->
 
 ## Changelog
-### 4.2.1-alpha.0 (2024-01-30)
+### **WORK IN PROGRESS**
 * (mcm1957) Adapter will be terminated now after a maximum of 45s execution time to clean unresponsive service.
 * (mcm1957) Default cron schedule will be changed to random executions once a hour.
 * (mcm1957) Dependencies have been updated.
