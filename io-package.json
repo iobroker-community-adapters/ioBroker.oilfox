@@ -1,8 +1,21 @@
 {
   "common": {
-    "version": "4.2.0",
+    "version": "4.2.1-alpha.0",
     "name": "oilfox",
     "news": {
+      "4.2.1-alpha.0": {
+        "en": "Adapter will be terminated now after a maximum of 45s execution time to clean unresponsive service.\nDefault cron schedule will be changed to random executions once a hour.\nDependencies have been updated.",
+        "de": "Der Adapter wird nun nach maximal 45s Ausführungszeit beendet.\nStandard Cron Zeitplan wird auf Ausführen einmal pro Stunde zu zufälligem Zeitpunkt geändert.\nAbhängigkeiten wurden aktualisiert.",
+        "ru": "Адаптер будет расторгнут сейчас после максимума 45-х часов выполнения для очистки не отвечающей требованиям службы.\nГрафик по умолчанию будет изменен на случайные казни раз в час.\nЗависимость была обновлена.",
+        "pt": "Adaptador será terminado agora após um máximo de 45s tempo de execução para limpar o serviço inresponsável.\nO cronograma padrão será alterado para execuções aleatórias uma vez por hora.\nAs dependências foram atualizadas.",
+        "nl": "Adapter wordt nu beëindigd na een maximum van 45s uitvoeringstijd om onresponsieve service schoon te maken.\nStandaard cron schema zal worden gewijzigd in willekeurige executies eenmaal per uur.\nAfhankelijkheden zijn bijgewerkt.",
+        "fr": "L'adaptateur sera résilié maintenant après un maximum de 45s temps d'exécution pour nettoyer le service non réactif.\nLe programme par défaut de cron sera changé en exécutions aléatoires une fois par heure.\nLes dépendances ont été actualisées.",
+        "it": "L'adattatore sarà terminato subito dopo un massimo di 45s tempo di esecuzione per pulire il servizio non rispondente.\nIl programma predefinito di cron verrà modificato in esecuzioni casuali una volta all'ora.\nLe dipendenze sono state aggiornate.",
+        "es": "El adaptador se terminará ahora después de un máximo de 45 años de ejecución para limpiar el servicio sin respuesta.\nEl cronograma predeterminado se cambiará a las ejecuciones aleatorias una vez por hora.\nSe han actualizado las dependencias.",
+        "pl": "Adapter zostanie zakończony teraz po maksymalnie 45s czas wykonania do czyszczenia niereagujących usług.\nDomyślny harmonogram cron będzie zmieniany na losowe egzekucje raz na godzinę.\nZaktualizowano zależność.",
+        "uk": "Перехідник буде припинено після максимального часу виконання 45-х для очищення невідповідного сервісу.\nЗа замовчуванням cron буде змінено на випадкові виконання раз на годину.\nОновлено залежність.",
+        "zh-cn": "适配器在最多45秒的执行时间后将终止,以清理无响应的服务.\n默认处决时间表将改为每小时一次的任意处决.\n附属关系已经更新."
+      },
       "4.2.0": {
         "en": "Adapter requires node 16 or newer now\nA timeout of 5s has been added to http requests to avoid hanging processes (#110)\nDependencies have been updated",
         "de": "Adapter benötigt Node 16 oder neuer\nEin Timeout von 5s wurde zu http-Anfragen hinzugefügt, um hängende Prozesse zu vermeiden (#110)\nAbhängigkeiten wurden aktualisiert",
@@ -75,18 +88,6 @@
         "es": "arreglo para múltiples zorros petroleros",
         "pl": "poprawka dla wielu lisów oleistych",
         "zh-cn": "修复多个油狐"
-      },
-      "2.2.0": {
-        "en": "update dependencies",
-        "de": "Abhängigkeiten aktualisieren",
-        "ru": "обновить зависимости",
-        "pt": "atualizar dependências",
-        "nl": "update afhankelijkheden",
-        "fr": "mettre à jour les dépendances",
-        "it": "aggiornare le dipendenze",
-        "es": "actualizar dependencias",
-        "pl": "zaktualizuj zależności",
-        "zh-cn": "更新依赖"
       }
     },
     "titleLang": {
