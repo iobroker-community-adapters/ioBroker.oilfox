@@ -1,8 +1,21 @@
 {
   "common": {
-    "version": "4.2.1",
+    "version": "4.3.0",
     "name": "oilfox",
     "news": {
+      "4.3.0": {
+        "en": "Adapter requires node.js >= 18 and js-controller >= 5 now\nDependencies have been updated",
+        "de": "Adapter benötigt node.js >= 18 und js-controller >= 5 jetzt\nAbhängigkeiten wurden aktualisiert",
+        "ru": "Адаптер требует node.js >= 18 и js-контроллер >= 5 сейчас\nЗависимость обновлена",
+        "pt": "Adapter requer node.js >= 18 e js-controller >= 5 agora\nAs dependências foram atualizadas",
+        "nl": "Voor adaptor zijn node.js < 18 en js-controller > Nu 5\nAfhankelijkheden zijn bijgewerkt",
+        "fr": "L'adaptateur nécessite node.js >= 18 et js-controller >= 5 maintenant\nLes dépendances ont été actualisées",
+        "it": "Adattatore richiede node.js >= 18 e js-controller >= 5 ora\nLe dipendenze sono state aggiornate",
+        "es": "Adaptador requiere node.js √≥= 18 y js-controller 5 ahora\nSe han actualizado las dependencias",
+        "pl": "Adapter wymaga node.js > = 18 i kontroler js- > = 5 teraz\nZaktualizowano zależności",
+        "uk": "Адаптер вимагає node.js >= 18 і js-controller >= 5 тепер\nЗалежність було оновлено",
+        "zh-cn": "适配器需要节点.js QQ18和js控制器 QQ 现在5号\n依赖关系已更新"
+      },
       "4.2.1": {
         "en": "Adapter will be terminated now after a maximum of 45s execution time to clean unresponsive service.\nDefault cron schedule will be changed to random executions once a hour.\nDependencies have been updated.",
         "de": "Der Adapter wird nun nach maximal 45s Ausführungszeit zum Reinigen von unverantwortlichem Service beendet.\nStandard Cron Zeitplan wird einmal pro Stunde zu zufälligen Ausführungen geändert.\nAbhängigkeiten wurden aktualisiert.",
@@ -77,18 +90,6 @@
         "es": "arreglar múltiples oilfox",
         "pl": "napraw wielu lisów oleistych",
         "zh-cn": "修复多个油狐"
-      },
-      "3.0.0": {
-        "en": "fix api after changes",
-        "de": "API nach Änderungen reparieren",
-        "ru": "исправить API после изменений",
-        "pt": "corrigir api após as alterações",
-        "nl": "api repareren na wijzigingen",
-        "fr": "réparer l'api après les modifications",
-        "it": "correggere l'API dopo le modifiche",
-        "es": "corregir api después de los cambios",
-        "pl": "napraw API po zmianach",
-        "zh-cn": "修改后修复api"
       }
     },
     "titleLang": {
