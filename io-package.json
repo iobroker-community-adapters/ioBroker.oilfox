@@ -128,12 +128,14 @@
     "keywords": [
       "oilfox"
     ],
-    "nondeletable": false,
     "type": "hardware",
     "authors": [
       "jochen kuehner <jochen.kuehner@gmx.de>"
     ],
-    "license": "MIT",
+    "licenseInformation": {
+      "license": "MIT",
+      "type": "free"
+    },
     "readme": "https://github.com/iobroker-community-adapters/ioBroker.oilfox/blob/master/README.md",
     "extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/admin/oilfox.png",
     "compact": true,
@@ -144,12 +146,12 @@
     },
     "dependencies": [
       {
-        "js-controller": ">=3.0.0"
+        "js-controller": ">=5.0.19"
       }
     ],
     "globalDependencies": [
       {
-        "admin": ">=5.1.28"
+        "admin": ">=6.13.16"
       }
     ],
     "adminUI": {
