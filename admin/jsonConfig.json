@@ -6,9 +6,11 @@
       "type": "text",
       "label": "E-Mail",
       "help": "E-Mail of your Oilfox Account",
+      "xs": 12,
       "sm": 12,
       "md": 6,
-      "lg": 4
+      "lg": 4,
+      "xl": 4
     },
     "password": {
       "newLine": true,
@@ -16,9 +18,11 @@
       "repeat": true,
       "label": "Password",
       "help": "Password of your Oilfox Account",
+      "xs": 12,
       "sm": 12,
       "md": 6,
-      "lg": 4
+      "lg": 4,
+      "xl": 4
     }
   }
 }
