@@ -1,8 +1,21 @@
 {
   "common": {
-    "version": "4.3.0",
+    "version": "4.3.1",
     "name": "oilfox",
     "news": {
+      "4.3.1": {
+        "en": "Admin-UI has been adapted for small displays.\nTesting for node.js 22 has been added.\nMissing translations have been added.\nDependencies have been updated.",
+        "de": "Admin-UI wurde für kleine Displays angepasst.\nDie Prüfung auf node.js 22 wurde hinzugefügt.\nFehlende Übersetzungen wurden hinzugefügt.\nAbhängigkeiten wurden aktualisiert.",
+        "ru": "Admin-UI был адаптирован для небольших дисплеев.\nДобавлено тестирование на node.js 22.\nДобавлены недостающие переводы.\nЗависимость была обновлена.",
+        "pt": "Admin-UI foi adaptado para pequenos monitores.\nTestar para node.js 22 foi adicionado.\nForam adicionadas traduções perdidas.\nAs dependências foram atualizadas.",
+        "nl": "Beheerder-UI is aangepast voor kleine displays.\nTesten op node.js 22 is toegevoegd.\nEr zijn ontbrekende vertalingen toegevoegd.\nAfhankelijkheden zijn bijgewerkt.",
+        "fr": "Admin-UI a été adapté pour les petits affichages.\nLe test pour node.js 22 a été ajouté.\nDes traductions manquantes ont été ajoutées.\nLes dépendances ont été actualisées.",
+        "it": "Admin-UI è stato adattato per piccoli display.\nÈ stato aggiunto il test per node.js 22.\nSono state aggiunte traduzioni scomparse.\nLe dipendenze sono state aggiornate.",
+        "es": "Admin-UI ha sido adaptado para pequeñas pantallas.\nSe han añadido pruebas para node.js 22.\nSe han añadido traducciones perdidas.\nSe han actualizado las dependencias.",
+        "pl": "Admin- UI został dostosowany do małych wyświetlaczy.\nDodano test na node.js 22.\nDodano brakujące tłumaczenia.\nZaktualizowano zależność.",
+        "uk": "Адмін-УІ адаптований для малих дисплеїв.\nДодано тестування для node.js 22.\nДодані переклади.\nОновлено залежність.",
+        "zh-cn": "Admin-UI已经适应了小型显示功能.\n增加了节点.js 22的测试.\n增加了缺少的译文.\n附属关系已经更新."
+      },
       "4.3.0": {
         "en": "Adapter requires node.js >= 18 and js-controller >= 5 now\nDependencies have been updated",
         "de": "Adapter benötigt node.js >= 18 und js-controller >= 5 jetzt\nAbhängigkeiten wurden aktualisiert",
