@@ -65,7 +65,8 @@
         "it": "GUI di configurazione corretta",
         "es": "GUI de configuración corregida",
         "pl": "Poprawiony GUI konfiguracji",
-        "zh-cn": "更正了配置 GUI"
+        "zh-cn": "更正了配置 GUI",
+        "uk": "Виправлений графічний інтерфейс конфігурації"
       },
       "4.0.2": {
         "en": "IMPORTANT: All datastructures change with this update!\nIMPORTANT: Password needs to be re-entered after update!\nupdate to new Oilfox API\nGeneral updates\nAdd Sentry for crash reporting",
@@ -77,7 +78,8 @@
         "it": "IMPORTANTE: tutte le strutture dati cambiano con questo aggiornamento!\nIMPORTANTE: la password deve essere reinserita dopo l'aggiornamento!\naggiornamento alla nuova API Oilfox\nAggiornamenti generali\nAggiungi Sentinella per la segnalazione degli arresti anomali",
         "es": "IMPORTANTE: ¡Todas las estructuras de datos cambian con esta actualización!\nIMPORTANTE: ¡Se debe volver a ingresar la contraseña después de la actualización!\nactualizar a la nueva API de Oilfox\nActualizaciones generales\nAgregar Sentry para informes de fallas",
         "pl": "WAŻNE: Wraz z tą aktualizacją zmienią się wszystkie struktury danych!\nWAŻNE: po aktualizacji hasło należy wprowadzić ponownie!\naktualizacja do nowego API Oilfox\nOgólne aktualizacje\nDodaj Sentry do zgłaszania awarii",
-        "zh-cn": "重要提示：所有数据结构都随着这次更新而改变！\n重要提示：更新后需要重新输入密码！\n更新到新的 Oilfox API\n一般更新\n添加 Sentry 以进行崩溃报告"
+        "zh-cn": "重要提示：所有数据结构都随着这次更新而改变！\n重要提示：更新后需要重新输入密码！\n更新到新的 Oilfox API\n一般更新\n添加 Sentry 以进行崩溃报告",
+        "uk": "ВАЖЛИВО: усі структури даних змінюються з цим оновленням!\nВАЖЛИВО: після оновлення пароль необхідно ввести повторно!\nоновлення до нового Oilfox API\nЗагальні оновлення\nДодайте Sentry для звітування про збої"
       }
     },
     "titleLang": {
@@ -90,7 +92,8 @@
       "it": "Oilfox",
       "es": "Oilfox",
       "pl": "Oilfox",
-      "zh-cn": "Oilfox"
+      "zh-cn": "Oilfox",
+      "uk": "Oilfox"
     },
     "desc": {
       "en": "iobroker adapter for oilfox oil sensor",
@@ -102,7 +105,8 @@
       "it": "adattatore iobroker per sensore olio oilfox",
       "es": "Adaptador iobroker para sensor de aceite oilfox",
       "pl": "Adapter iobroker do czujnika oleju ropnego",
-      "zh-cn": "用于oilfox油传感器的iobroker适配器"
+      "zh-cn": "用于oilfox油传感器的iobroker适配器",
+      "uk": "адаптер iobroker для датчика масла oilfox"
     },
     "connectionType": "cloud",
     "dataSource": "poll",
@@ -165,7 +169,8 @@
           "it": "La nuova versione cambia la struttura dei dati e necessita di un aggiornamento della configurazione!",
           "es": "¡La nueva versión cambia la estructura de datos y necesita una actualización de configuración!",
           "pl": "Nowa wersja zmienia strukturę danych i wymaga aktualizacji konfiguracji!",
-          "zh-cn": "新版本更改数据结构并需要更新配置！"
+          "zh-cn": "新版本更改数据结构并需要更新配置！",
+          "uk": "Нова версія змінює структуру даних і потребує оновлення конфігурації!"
         },
         "text": {
           "en": "The new v4.x changes all datastructures. Please check new objects after update! Additionally the password used to access Oilfox needs to be re-entered in the Instance-Settings once!",
@@ -177,7 +182,8 @@
           "it": "La nuova v4.x cambia tutte le strutture dati. Si prega di controllare i nuovi oggetti dopo l'aggiornamento! Inoltre, la password utilizzata per accedere a Oilfox deve essere reinserita nelle Impostazioni dell'istanza una volta!",
           "es": "La nueva v4.x cambia todas las estructuras de datos. ¡Compruebe los nuevos objetos después de la actualización! ¡Además, la contraseña utilizada para acceder a Oilfox debe volver a ingresarse en la Configuración de instancia una vez!",
           "pl": "Nowa wersja 4.x zmienia wszystkie struktury danych. Proszę sprawdzić nowe obiekty po aktualizacji! Dodatkowo hasło używane do uzyskania dostępu do Oilfox musi zostać raz ponownie wprowadzone w ustawieniach instancji!",
-          "zh-cn": "新的 v4.x 更改了所有数据结构。更新后请检查新对象！此外，用于访问 Oilfox 的密码需要在实例设置中重新输入一次！"
+          "zh-cn": "新的 v4.x 更改了所有数据结构。更新后请检查新对象！此外，用于访问 Oilfox 的密码需要在实例设置中重新输入一次！",
+          "uk": "Нова v4.x змінює всі структури даних. Будь ласка, перевіряйте нові об'єкти після оновлення! Крім того, пароль, який використовується для доступу до Oilfox, потрібно один раз повторно ввести в налаштуваннях екземпляра!"
         },
         "level": "warn",
         "buttons": [
