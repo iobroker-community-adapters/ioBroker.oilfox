@@ -113,6 +113,7 @@
     "enabled": true,
     "messagebox": false,
     "loglevel": "info",
+    "tier": 3,
     "keywords": [
       "oilfox"
     ],
