@@ -78,18 +78,6 @@
         "es": "IMPORTANTE: ¡Todas las estructuras de datos cambian con esta actualización!\nIMPORTANTE: ¡Se debe volver a ingresar la contraseña después de la actualización!\nactualizar a la nueva API de Oilfox\nActualizaciones generales\nAgregar Sentry para informes de fallas",
         "pl": "WAŻNE: Wraz z tą aktualizacją zmienią się wszystkie struktury danych!\nWAŻNE: po aktualizacji hasło należy wprowadzić ponownie!\naktualizacja do nowego API Oilfox\nOgólne aktualizacje\nDodaj Sentry do zgłaszania awarii",
         "zh-cn": "重要提示：所有数据结构都随着这次更新而改变！\n重要提示：更新后需要重新输入密码！\n更新到新的 Oilfox API\n一般更新\n添加 Sentry 以进行崩溃报告"
-      },
-      "3.1.0": {
-        "en": "fix multiple oilfox",
-        "de": "Reparieren Sie mehrere Ölfuchs",
-        "ru": "исправить несколько oilfox",
-        "pt": "corrigir vários oilfox",
-        "nl": "repareer meerdere oilfox",
-        "fr": "réparer plusieurs oilfox",
-        "it": "correggere più oilfox",
-        "es": "arreglar múltiples oilfox",
-        "pl": "napraw wielu lisów oleistych",
-        "zh-cn": "修复多个油狐"
       }
     },
     "titleLang": {
