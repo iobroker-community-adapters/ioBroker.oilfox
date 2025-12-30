@@ -2,15 +2,10 @@
   "name": "iobroker.oilfox",
   "version": "4.3.1",
   "description": "Oilfox Adapter for ioBroker",
-  "author": {
-    "name": "Jochen Kuehner",
-    "email": "jochen.kuehner@gmx.de"
-  },
+  "author": "Jochen Kuehner <jochen.kuehner@gmx.de>",
   "contributors": [
-    {
-      "name": "Jochen Kuehner",
-      "email": "jochen.kuehner@gmx.de"
-    }
+    "Jochen Kuehner <jochen.kuehner@gmx.de>",
+    "iobroker-community-adapters <iobroker-community-adapters@gmx.de>"
   ],
   "homepage": "https://github.com/iobroker-community-adapters/ioBroker.oilfox",
   "license": "MIT",
